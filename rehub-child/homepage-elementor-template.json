@@ -1,0 +1,111 @@
+{
+  "_description": "Elementor Homepage Template Empfehlung fuer kurs-erfahrungen.com",
+  "_hinweis": "Dies ist eine Strukturvorlage - die Sections muessen in Elementor manuell erstellt werden",
+  "recommended_sections_order": [
+    {
+      "position": 1,
+      "name": "Hero Section",
+      "type": "elementor-section",
+      "recommendations": {
+        "headline": "H1 Tag mit Hauptkeyword verwenden, z.B. 'Die besten Online-Kurse im Test 2026'",
+        "subheadline": "Kurzer Satz der den USP kommuniziert",
+        "cta": "Suchfeld oder Top-Kategorien als Buttons",
+        "trust_elements": "Anzahl getesteter Kurse, Jahre Erfahrung, etc.",
+        "image": "WebP Format, max 100KB, fetchpriority=high",
+        "background": "CSS Gradient statt Bild fuer schnelleres LCP"
+      }
+    },
+    {
+      "position": 2,
+      "name": "Trust Bar / Social Proof",
+      "type": "elementor-section",
+      "recommendations": {
+        "content": "Bekannt aus... Logos, Anzahl Bewertungen, Leser-Statistiken",
+        "format": "Horizontale Leiste mit Icons/Logos",
+        "lazy_load": false
+      }
+    },
+    {
+      "position": 3,
+      "name": "Top Kurse 2026 (Hauptkategorie)",
+      "type": "elementor-section",
+      "recommendations": {
+        "headline": "H2 Tag: 'Top Online-Kurse 2026 im Vergleich'",
+        "format": "Rehub Vergleichstabelle oder Card Grid",
+        "items": "5-8 Top-Kurse mit Bewertung, Preis, CTA Button",
+        "schema": "itemListElement Schema automatisch durch Rehub"
+      }
+    },
+    {
+      "position": 4,
+      "name": "Kategorie-Navigation",
+      "type": "elementor-section",
+      "recommendations": {
+        "headline": "H2 Tag: 'Kurse nach Kategorie'",
+        "format": "Icon-Grid oder Card-Grid mit Kategorie-Bildern",
+        "categories": [
+          "Online Marketing",
+          "Programmierung",
+          "Business & Finanzen",
+          "Persoenlichkeitsentwicklung",
+          "Gesundheit & Fitness",
+          "Kreativitaet & Design"
+        ],
+        "links": "Jede Kategorie verlinkt auf Archivseite"
+      }
+    },
+    {
+      "position": 5,
+      "name": "Neueste Testberichte",
+      "type": "elementor-section",
+      "recommendations": {
+        "headline": "H2 Tag: 'Aktuelle Kurs-Testberichte'",
+        "format": "Rehub Post Grid oder Blog Posts Widget",
+        "items": "6-9 neueste Reviews",
+        "content_visibility": "auto fuer Performance"
+      }
+    },
+    {
+      "position": 6,
+      "name": "Wie wir testen (E-E-A-T)",
+      "type": "elementor-section",
+      "recommendations": {
+        "headline": "H2 Tag: 'So testen wir Online-Kurse'",
+        "format": "3-4 Schritte mit Icons",
+        "purpose": "E-E-A-T Signal fuer Google - zeigt Expertise und Methodik",
+        "steps": [
+          "Kurs selbst durcharbeiten",
+          "Community & Support testen",
+          "Preis-Leistung bewerten",
+          "Ehrliches Fazit schreiben"
+        ]
+      }
+    },
+    {
+      "position": 7,
+      "name": "FAQ Section",
+      "type": "elementor-section",
+      "recommendations": {
+        "headline": "H2 Tag: 'Haeufig gestellte Fragen'",
+        "format": "Elementor Accordion Widget",
+        "schema": "FAQPage Schema automatisch hinzufuegen",
+        "questions": [
+          "Wie findet ihr die besten Online-Kurse?",
+          "Sind die Bewertungen echt?",
+          "Wie verdient kurs-erfahrungen.com Geld?",
+          "Kann ich eigene Erfahrungen einreichen?"
+        ]
+      }
+    },
+    {
+      "position": 8,
+      "name": "Newsletter / CTA Section",
+      "type": "elementor-section",
+      "recommendations": {
+        "headline": "H2 Tag: 'Keine Kurs-Empfehlung verpassen'",
+        "format": "Email Opt-in Formular",
+        "incentive": "Gratis PDF Guide als Lead Magnet"
+      }
+    }
+  ]
+}
