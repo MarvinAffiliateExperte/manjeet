@@ -1,10 +1,11 @@
 {
   "version": "0.4",
-  "title": "Startseite Redesign 2026 - Kurs Erfahrungen",
+  "title": "Startseite – kurs-erfahrungen.com 2026",
   "type": "page",
   "content": [
+
     {
-      "id": "a1b2c3d",
+      "id": "s01hero",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -13,64 +14,69 @@
         "background_color_b": "#1e3a8a",
         "background_gradient_angle": { "unit": "deg", "size": 145 },
         "height": "min-height",
-        "custom_height": { "unit": "px", "size": 650 },
-        "padding": { "unit": "px", "top": "120", "right": "0", "bottom": "120", "left": "0", "isLinked": false }
+        "custom_height": { "unit": "px", "size": 620 },
+        "padding": { "unit": "px", "top": "110", "right": "0", "bottom": "110", "left": "0", "isLinked": false }
       },
       "elements": [
         {
-          "id": "a1b2c3e",
+          "id": "c01hero",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 100, "_inline_size": null, "content_position": "middle" },
           "elements": [
             {
-              "id": "a1b2c3f",
+              "id": "w01badge",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"text-align:center;margin-bottom:20px;\"><span style=\"display:inline-block;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);color:#f59e0b;font-size:13px;font-weight:700;letter-spacing:0.08em;padding:7px 20px;border-radius:99px;text-transform:uppercase;\">&#9733; Seit 2021 &bull; 500+ Kurse getestet &bull; 100% unabh&auml;ngig</span></div>"
+              },
+              "elements": []
+            },
+            {
+              "id": "w01h1",
               "elType": "widget",
               "widgetType": "heading",
-              "isInner": false,
               "settings": {
-                "title": "Die besten Online-Kurse im Test 2026",
+                "title": "Ehrliche Online-Kurs Testberichte & Erfahrungen 2026",
                 "header_size": "h1",
                 "align": "center",
                 "title_color": "#ffffff",
                 "typography_typography": "custom",
                 "typography_font_family": "Inter",
-                "typography_font_size": { "unit": "px", "size": 54 },
+                "typography_font_size": { "unit": "px", "size": 52 },
                 "typography_font_size_tablet": { "unit": "px", "size": 40 },
                 "typography_font_size_mobile": { "unit": "px", "size": 30 },
                 "typography_font_weight": "800",
-                "typography_line_height": { "unit": "em", "size": 1.2 },
-                "_margin": { "unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false }
+                "typography_line_height": { "unit": "em", "size": 1.18 },
+                "_margin": { "unit": "px", "top": "0", "right": "0", "bottom": "22", "left": "0", "isLinked": false }
               },
               "elements": []
             },
             {
-              "id": "a1b2c3g",
+              "id": "w01sub",
               "elType": "widget",
               "widgetType": "text-editor",
-              "isInner": false,
               "settings": {
-                "editor": "<p style=\"text-align:center;font-size:20px;color:rgba(255,255,255,0.85);max-width:680px;margin:0 auto 40px;\">Ehrliche Testberichte &amp; unabh&auml;ngige Vergleiche f&uuml;r Online-Kurse. Wir haben &uuml;ber 500 Kurse getestet &ndash; damit du den richtigen findest.</p>"
+                "editor": "<p style=\"text-align:center;font-size:19px;color:rgba(255,255,255,0.82);max-width:700px;margin:0 auto 44px;line-height:1.6;\">Marvin Seelh&ouml;fer testet Online-Kurse, Coachings &amp; digitale Produkte im deutschsprachigen Raum &ndash; mit echtem Geld, vollst&auml;ndig und ohne Herstellerkontakt.</p>"
               },
               "elements": []
             },
             {
-              "id": "a1b2c3h",
+              "id": "w01btns",
               "elType": "widget",
               "widgetType": "html",
-              "isInner": false,
               "settings": {
-                "html": "<div style=\"display:flex;gap:16px;justify-content:center;flex-wrap:wrap;\"><a href=\"/kurse/\" class=\"ke-btn-primary\" style=\"display:inline-block;background:#f59e0b;color:#0f172a;font-weight:700;font-size:17px;padding:17px 40px;border-radius:8px;text-decoration:none;\">Kurse entdecken &#8594;</a><a href=\"/testberichte/\" class=\"ke-btn-outline\" style=\"display:inline-block;background:transparent;color:#ffffff;font-weight:600;font-size:17px;padding:17px 40px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,0.55);\">Testberichte lesen</a></div>"
+                "html": "<div style=\"display:flex;gap:14px;justify-content:center;flex-wrap:wrap;\"><a href=\"/shop/\" style=\"display:inline-flex;align-items:center;gap:8px;background:#f59e0b;color:#0f172a;font-weight:700;font-size:17px;padding:16px 38px;border-radius:8px;text-decoration:none;\">Alle Testberichte &#8594;</a><a href=\"/experte/\" style=\"display:inline-flex;align-items:center;gap:8px;background:transparent;color:#ffffff;font-weight:600;font-size:17px;padding:16px 38px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,0.45);\">Experten entdecken</a></div>"
               },
               "elements": []
             },
             {
-              "id": "a1b2c3i",
+              "id": "w01trust",
               "elType": "widget",
               "widgetType": "html",
-              "isInner": false,
               "settings": {
-                "html": "<div style=\"display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:48px;\"><span style=\"color:rgba(255,255,255,0.7);font-size:15px;\">&#10003; Kostenlos &amp; unabh&auml;ngig</span><span style=\"color:rgba(255,255,255,0.7);font-size:15px;\">&#10003; Keine bezahlten Bewertungen</span><span style=\"color:rgba(255,255,255,0.7);font-size:15px;\">&#10003; Seit 2019 aktiv</span></div>"
+                "html": "<div style=\"display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:52px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.12);\"><span style=\"color:rgba(255,255,255,0.65);font-size:14px;\">&#10003;&nbsp;Kurs selbst gekauft</span><span style=\"color:rgba(255,255,255,0.65);font-size:14px;\">&#10003;&nbsp;Vollst&auml;ndig absolviert</span><span style=\"color:rgba(255,255,255,0.65);font-size:14px;\">&#10003;&nbsp;Kein Gratiszugang</span><span style=\"color:rgba(255,255,255,0.65);font-size:14px;\">&#10003;&nbsp;Provision beeinflusst keine Bewertung</span></div>"
               },
               "elements": []
             }
@@ -78,8 +84,9 @@
         }
       ]
     },
+
     {
-      "id": "b3c4d5e",
+      "id": "s02stats",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -88,120 +95,108 @@
         "border_border": "solid",
         "border_width": { "unit": "px", "top": "0", "right": "0", "bottom": "1", "left": "0", "isLinked": false },
         "border_color": "#e2e8f0",
-        "padding": { "unit": "px", "top": "48", "right": "0", "bottom": "48", "left": "0", "isLinked": false }
+        "padding": { "unit": "px", "top": "44", "right": "0", "bottom": "44", "left": "0", "isLinked": false }
       },
       "elements": [
         {
-          "id": "b3c4d5f",
+          "id": "c02a",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 25, "_inline_size": null, "content_position": "middle" },
           "elements": [
             {
-              "id": "b3c4d5g",
+              "id": "w02i1",
               "elType": "widget",
               "widgetType": "icon-box",
-              "isInner": false,
               "settings": {
                 "selected_icon": { "value": "fas fa-graduation-cap", "library": "fa-solid" },
-                "icon_size": { "unit": "px", "size": 40 },
+                "icon_size": { "unit": "px", "size": 38 },
                 "icon_color": "#1e40af",
                 "title_text": "500+ Kurse",
-                "description_text": "unabhängig getestet",
-                "position": "top",
-                "content_align": "center",
-                "title_color": "#1e293b",
-                "description_color": "#64748b",
+                "description_text": "unabh&auml;ngig getestet",
+                "position": "top", "content_align": "center",
+                "title_color": "#1e293b", "description_color": "#64748b",
                 "title_typography_typography": "custom",
-                "title_typography_font_size": { "unit": "px", "size": 26 },
-                "title_typography_font_weight": "700"
+                "title_typography_font_size": { "unit": "px", "size": 24 },
+                "title_typography_font_weight": "800"
               },
               "elements": []
             }
           ]
         },
         {
-          "id": "b3c4d5h",
+          "id": "c02b",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 25, "_inline_size": null, "content_position": "middle" },
           "elements": [
             {
-              "id": "b3c4d5i",
+              "id": "w02i2",
               "elType": "widget",
               "widgetType": "icon-box",
-              "isInner": false,
               "settings": {
-                "selected_icon": { "value": "fas fa-users", "library": "fa-solid" },
-                "icon_size": { "unit": "px", "size": 40 },
+                "selected_icon": { "value": "fas fa-calendar-alt", "library": "fa-solid" },
+                "icon_size": { "unit": "px", "size": 38 },
                 "icon_color": "#1e40af",
-                "title_text": "50.000+ Leser",
-                "description_text": "jeden Monat",
-                "position": "top",
-                "content_align": "center",
-                "title_color": "#1e293b",
-                "description_color": "#64748b",
+                "title_text": "Seit 2021",
+                "description_text": "aktiv im deutschsprachigen Raum",
+                "position": "top", "content_align": "center",
+                "title_color": "#1e293b", "description_color": "#64748b",
                 "title_typography_typography": "custom",
-                "title_typography_font_size": { "unit": "px", "size": 26 },
-                "title_typography_font_weight": "700"
+                "title_typography_font_size": { "unit": "px", "size": 24 },
+                "title_typography_font_weight": "800"
               },
               "elements": []
             }
           ]
         },
         {
-          "id": "b3c4d5j",
+          "id": "c02c",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 25, "_inline_size": null, "content_position": "middle" },
           "elements": [
             {
-              "id": "b3c4d5k",
+              "id": "w02i3",
               "elType": "widget",
               "widgetType": "icon-box",
-              "isInner": false,
               "settings": {
-                "selected_icon": { "value": "fas fa-shield-alt", "library": "fa-solid" },
-                "icon_size": { "unit": "px", "size": 40 },
-                "icon_color": "#1e40af",
-                "title_text": "7+ Jahre",
-                "description_text": "Erfahrung &amp; Expertise",
-                "position": "top",
-                "content_align": "center",
-                "title_color": "#1e293b",
-                "description_color": "#64748b",
+                "selected_icon": { "value": "fab fa-youtube", "library": "fa-brands" },
+                "icon_size": { "unit": "px", "size": 38 },
+                "icon_color": "#dc2626",
+                "title_text": "YouTube",
+                "description_text": "Video-Reviews zu jedem Kurs",
+                "position": "top", "content_align": "center",
+                "title_color": "#1e293b", "description_color": "#64748b",
                 "title_typography_typography": "custom",
-                "title_typography_font_size": { "unit": "px", "size": 26 },
-                "title_typography_font_weight": "700"
+                "title_typography_font_size": { "unit": "px", "size": 24 },
+                "title_typography_font_weight": "800"
               },
               "elements": []
             }
           ]
         },
         {
-          "id": "b3c4d5l",
+          "id": "c02d",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 25, "_inline_size": null, "content_position": "middle" },
           "elements": [
             {
-              "id": "b3c4d5m",
+              "id": "w02i4",
               "elType": "widget",
               "widgetType": "icon-box",
-              "isInner": false,
               "settings": {
                 "selected_icon": { "value": "fas fa-star", "library": "fa-solid" },
-                "icon_size": { "unit": "px", "size": 40 },
+                "icon_size": { "unit": "px", "size": 38 },
                 "icon_color": "#f59e0b",
-                "title_text": "4,8 / 5 Sterne",
-                "description_text": "Ø Bewertung unserer Leser",
-                "position": "top",
-                "content_align": "center",
-                "title_color": "#1e293b",
-                "description_color": "#64748b",
+                "title_text": "ProvenExpert",
+                "description_text": "Verifizierte Leserbewertungen",
+                "position": "top", "content_align": "center",
+                "title_color": "#1e293b", "description_color": "#64748b",
                 "title_typography_typography": "custom",
-                "title_typography_font_size": { "unit": "px", "size": 26 },
-                "title_typography_font_weight": "700"
+                "title_typography_font_size": { "unit": "px", "size": 24 },
+                "title_typography_font_weight": "800"
               },
               "elements": []
             }
@@ -209,8 +204,9 @@
         }
       ]
     },
+
     {
-      "id": "c5d6e7f",
+      "id": "s03topkurse",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -220,111 +216,53 @@
       },
       "elements": [
         {
-          "id": "c5d6e7g",
+          "id": "c03a",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 100, "_inline_size": null },
           "elements": [
             {
-              "id": "c5d6e7h",
+              "id": "w03h2",
               "elType": "widget",
               "widgetType": "heading",
-              "isInner": false,
               "settings": {
-                "title": "Top Online-Kurse 2026 im Vergleich",
+                "title": "Top-bewertete Kurse & Coachings",
                 "header_size": "h2",
                 "align": "center",
                 "title_color": "#1e293b",
                 "typography_typography": "custom",
                 "typography_font_family": "Inter",
                 "typography_font_size": { "unit": "px", "size": 38 },
-                "typography_font_size_mobile": { "unit": "px", "size": 28 },
+                "typography_font_size_mobile": { "unit": "px", "size": 26 },
                 "typography_font_weight": "800"
               },
               "elements": []
             },
             {
-              "id": "c5d6e7i",
+              "id": "w03sub",
               "elType": "widget",
               "widgetType": "text-editor",
-              "isInner": false,
               "settings": {
-                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:600px;margin:12px auto 48px;\">Unabh&auml;ngig getestete Empfehlungen &ndash; ehrlich, transparent und aktuell.</p>"
+                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:580px;margin:12px auto 48px;\">Die am besten bewerteten Produkte aus allen Kategorien &ndash; vollst&auml;ndig getestet von Marvin Seelh&ouml;fer.</p>"
               },
               "elements": []
             },
             {
-              "id": "c5d6e7j",
-              "elType": "section",
-              "isInner": true,
+              "id": "w03wc",
+              "elType": "widget",
+              "widgetType": "shortcode",
               "settings": {
-                "gap": "extended",
-                "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+                "shortcode": "[products limit=\"6\" columns=\"3\" orderby=\"rating\" order=\"DESC\" _css_classes=\"ke-wc-products\"]",
+                "_css_classes": "ke-products-wrap"
               },
-              "elements": [
-                {
-                  "id": "c5d6e7k",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "c5d6e7l",
-                      "elType": "widget",
-                      "widgetType": "html",
-                      "isInner": true,
-                      "settings": {
-                        "html": "<div class=\"ke-course-card\"><div class=\"ke-course-badge\">&#11088; Platz 1</div><div class=\"ke-course-icon\"><i class=\"fas fa-chart-line\" style=\"font-size:36px;color:#1e40af;\"></i></div><h3 class=\"ke-course-title\">Online Marketing Masterclass</h3><div class=\"ke-course-rating\"><span class=\"ke-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4,9</strong> / 5</div><p class=\"ke-course-desc\">Der umfassendste Kurs f&uuml;r digitales Marketing, SEO, Ads &amp; Social Media.</p><div class=\"ke-course-meta\"><span>&#10003; 12 Module</span><span>&#10003; Zertifikat</span></div><a href=\"/testberichte/online-marketing/\" class=\"ke-course-btn\">Zum Testbericht</a></div>"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "c5d6e7m",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "c5d6e7n",
-                      "elType": "widget",
-                      "widgetType": "html",
-                      "isInner": true,
-                      "settings": {
-                        "html": "<div class=\"ke-course-card ke-course-card--featured\"><div class=\"ke-course-badge ke-course-badge--gold\">&#128081; Redaktions-Tipp</div><div class=\"ke-course-icon\"><i class=\"fas fa-code\" style=\"font-size:36px;color:#1e40af;\"></i></div><h3 class=\"ke-course-title\">Python f&uuml;r Einsteiger &amp; Profis</h3><div class=\"ke-course-rating\"><span class=\"ke-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4,8</strong> / 5</div><p class=\"ke-course-desc\">Von Null zum Python-Entwickler &ndash; Schritt f&uuml;r Schritt mit echten Projekten.</p><div class=\"ke-course-meta\"><span>&#10003; 20+ Stunden</span><span>&#10003; Lebenslang</span></div><a href=\"/testberichte/programmierung/\" class=\"ke-course-btn\">Zum Testbericht</a></div>"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "c5d6e7o",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "c5d6e7p",
-                      "elType": "widget",
-                      "widgetType": "html",
-                      "isInner": true,
-                      "settings": {
-                        "html": "<div class=\"ke-course-card\"><div class=\"ke-course-badge\">&#128200; Platz 3</div><div class=\"ke-course-icon\"><i class=\"fas fa-euro-sign\" style=\"font-size:36px;color:#1e40af;\"></i></div><h3 class=\"ke-course-title\">Business &amp; Investment Guide</h3><div class=\"ke-course-rating\"><span class=\"ke-stars\">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <strong>4,7</strong> / 5</div><p class=\"ke-course-desc\">Finanzen, Investitionen und unternehmerisches Denken f&uuml;r den deutschen Markt.</p><div class=\"ke-course-meta\"><span>&#10003; 8 Module</span><span>&#10003; Community</span></div><a href=\"/testberichte/business/\" class=\"ke-course-btn\">Zum Testbericht</a></div>"
-                      },
-                      "elements": []
-                    }
-                  ]
-                }
-              ]
+              "elements": []
             },
             {
-              "id": "c5d6e7q",
+              "id": "w03cta",
               "elType": "widget",
               "widgetType": "html",
-              "isInner": false,
               "settings": {
-                "html": "<div style=\"text-align:center;margin-top:48px;\"><a href=\"/kurse/\" style=\"display:inline-block;background:#1e40af;color:#ffffff;font-weight:700;font-size:16px;padding:16px 40px;border-radius:8px;text-decoration:none;\">Alle Kursvergleiche ansehen &#8594;</a></div>"
+                "html": "<div style=\"text-align:center;margin-top:48px;\"><a href=\"/shop/\" style=\"display:inline-block;background:#1e40af;color:#ffffff;font-weight:700;font-size:16px;padding:16px 40px;border-radius:8px;text-decoration:none;\">Alle Testberichte ansehen &#8594;</a></div>"
               },
               "elements": []
             }
@@ -332,8 +270,9 @@
         }
       ]
     },
+
     {
-      "id": "d7e8f9a",
+      "id": "s04cats",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -343,253 +282,54 @@
       },
       "elements": [
         {
-          "id": "d7e8f9b",
+          "id": "c04a",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 100, "_inline_size": null },
           "elements": [
             {
-              "id": "d7e8f9c",
+              "id": "w04h2",
               "elType": "widget",
               "widgetType": "heading",
-              "isInner": false,
               "settings": {
-                "title": "Kurse nach Kategorie durchsuchen",
+                "title": "Testberichte nach Kategorie",
                 "header_size": "h2",
                 "align": "center",
                 "title_color": "#1e293b",
                 "typography_typography": "custom",
                 "typography_font_family": "Inter",
                 "typography_font_size": { "unit": "px", "size": 38 },
-                "typography_font_size_mobile": { "unit": "px", "size": 28 },
+                "typography_font_size_mobile": { "unit": "px", "size": 26 },
                 "typography_font_weight": "800"
               },
               "elements": []
             },
             {
-              "id": "d7e8f9d",
+              "id": "w04sub",
               "elType": "widget",
               "widgetType": "text-editor",
-              "isInner": false,
               "settings": {
-                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:600px;margin:12px auto 48px;\">Finde den perfekten Kurs in deinem Interessensgebiet.</p>"
+                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:580px;margin:12px auto 48px;\">Von Online Marketing bis Trading &ndash; finde Erfahrungsberichte genau f&uuml;r dein Thema.</p>"
               },
               "elements": []
             },
             {
-              "id": "d7e8f9e",
-              "elType": "section",
-              "isInner": true,
+              "id": "w04wc",
+              "elType": "widget",
+              "widgetType": "shortcode",
               "settings": {
-                "gap": "extended",
-                "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false }
+                "shortcode": "[product_categories number=\"6\" columns=\"3\" orderby=\"count\" order=\"DESC\"]",
+                "_css_classes": "ke-categories-wrap"
               },
-              "elements": [
-                {
-                  "id": "d7e8f9f",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "d7e8f9g",
-                      "elType": "widget",
-                      "widgetType": "icon-box",
-                      "isInner": true,
-                      "settings": {
-                        "selected_icon": { "value": "fas fa-bullhorn", "library": "fa-solid" },
-                        "icon_size": { "unit": "px", "size": 36 },
-                        "icon_color": "#1e40af",
-                        "title_text": "Online Marketing",
-                        "description_text": "SEO, Ads, Social Media &amp; mehr",
-                        "link": { "url": "/kategorie/online-marketing/" },
-                        "position": "left",
-                        "content_align": "left",
-                        "_css_classes": "ke-cat-card",
-                        "title_color": "#1e293b",
-                        "description_color": "#64748b",
-                        "title_typography_typography": "custom",
-                        "title_typography_font_size": { "unit": "px", "size": 18 },
-                        "title_typography_font_weight": "700"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "d7e8f9h",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "d7e8f9i",
-                      "elType": "widget",
-                      "widgetType": "icon-box",
-                      "isInner": true,
-                      "settings": {
-                        "selected_icon": { "value": "fas fa-laptop-code", "library": "fa-solid" },
-                        "icon_size": { "unit": "px", "size": 36 },
-                        "icon_color": "#1e40af",
-                        "title_text": "Programmierung",
-                        "description_text": "Python, JavaScript, Web-Entwicklung",
-                        "link": { "url": "/kategorie/programmierung/" },
-                        "position": "left",
-                        "content_align": "left",
-                        "_css_classes": "ke-cat-card",
-                        "title_color": "#1e293b",
-                        "description_color": "#64748b",
-                        "title_typography_typography": "custom",
-                        "title_typography_font_size": { "unit": "px", "size": 18 },
-                        "title_typography_font_weight": "700"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "d7e8f9j",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "d7e8f9k",
-                      "elType": "widget",
-                      "widgetType": "icon-box",
-                      "isInner": true,
-                      "settings": {
-                        "selected_icon": { "value": "fas fa-chart-bar", "library": "fa-solid" },
-                        "icon_size": { "unit": "px", "size": 36 },
-                        "icon_color": "#1e40af",
-                        "title_text": "Business &amp; Finanzen",
-                        "description_text": "Investitionen, Unternehmensführung",
-                        "link": { "url": "/kategorie/business-finanzen/" },
-                        "position": "left",
-                        "content_align": "left",
-                        "_css_classes": "ke-cat-card",
-                        "title_color": "#1e293b",
-                        "description_color": "#64748b",
-                        "title_typography_typography": "custom",
-                        "title_typography_font_size": { "unit": "px", "size": 18 },
-                        "title_typography_font_weight": "700"
-                      },
-                      "elements": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "d7e8f9l",
-              "elType": "section",
-              "isInner": true,
-              "settings": {
-                "gap": "extended",
-                "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
-              },
-              "elements": [
-                {
-                  "id": "d7e8f9m",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "d7e8f9n",
-                      "elType": "widget",
-                      "widgetType": "icon-box",
-                      "isInner": true,
-                      "settings": {
-                        "selected_icon": { "value": "fas fa-brain", "library": "fa-solid" },
-                        "icon_size": { "unit": "px", "size": 36 },
-                        "icon_color": "#1e40af",
-                        "title_text": "Persönlichkeit",
-                        "description_text": "Mindset, Produktivität, Leadership",
-                        "link": { "url": "/kategorie/persoenlichkeitsentwicklung/" },
-                        "position": "left",
-                        "content_align": "left",
-                        "_css_classes": "ke-cat-card",
-                        "title_color": "#1e293b",
-                        "description_color": "#64748b",
-                        "title_typography_typography": "custom",
-                        "title_typography_font_size": { "unit": "px", "size": 18 },
-                        "title_typography_font_weight": "700"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "d7e8f9o",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "d7e8f9p",
-                      "elType": "widget",
-                      "widgetType": "icon-box",
-                      "isInner": true,
-                      "settings": {
-                        "selected_icon": { "value": "fas fa-heartbeat", "library": "fa-solid" },
-                        "icon_size": { "unit": "px", "size": 36 },
-                        "icon_color": "#1e40af",
-                        "title_text": "Gesundheit &amp; Fitness",
-                        "description_text": "Ernährung, Training, Wohlbefinden",
-                        "link": { "url": "/kategorie/gesundheit-fitness/" },
-                        "position": "left",
-                        "content_align": "left",
-                        "_css_classes": "ke-cat-card",
-                        "title_color": "#1e293b",
-                        "description_color": "#64748b",
-                        "title_typography_typography": "custom",
-                        "title_typography_font_size": { "unit": "px", "size": 18 },
-                        "title_typography_font_weight": "700"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "d7e8f9q",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "d7e8f9r",
-                      "elType": "widget",
-                      "widgetType": "icon-box",
-                      "isInner": true,
-                      "settings": {
-                        "selected_icon": { "value": "fas fa-palette", "library": "fa-solid" },
-                        "icon_size": { "unit": "px", "size": 36 },
-                        "icon_color": "#1e40af",
-                        "title_text": "Design &amp; Kreativität",
-                        "description_text": "Grafik, Video, Fotografie &amp; mehr",
-                        "link": { "url": "/kategorie/design-kreativitaet/" },
-                        "position": "left",
-                        "content_align": "left",
-                        "_css_classes": "ke-cat-card",
-                        "title_color": "#1e293b",
-                        "description_color": "#64748b",
-                        "title_typography_typography": "custom",
-                        "title_typography_font_size": { "unit": "px", "size": 18 },
-                        "title_typography_font_weight": "700"
-                      },
-                      "elements": []
-                    }
-                  ]
-                }
-              ]
+              "elements": []
             }
           ]
         }
       ]
     },
+
     {
-      "id": "e9f0a1b",
+      "id": "s05neu",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -599,111 +339,53 @@
       },
       "elements": [
         {
-          "id": "e9f0a1c",
+          "id": "c05a",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 100, "_inline_size": null },
           "elements": [
             {
-              "id": "e9f0a1d",
+              "id": "w05h2",
               "elType": "widget",
               "widgetType": "heading",
-              "isInner": false,
               "settings": {
-                "title": "Aktuelle Kurs-Testberichte",
+                "title": "Neueste Erfahrungsberichte",
                 "header_size": "h2",
                 "align": "center",
                 "title_color": "#1e293b",
                 "typography_typography": "custom",
                 "typography_font_family": "Inter",
                 "typography_font_size": { "unit": "px", "size": 38 },
-                "typography_font_size_mobile": { "unit": "px", "size": 28 },
+                "typography_font_size_mobile": { "unit": "px", "size": 26 },
                 "typography_font_weight": "800"
               },
               "elements": []
             },
             {
-              "id": "e9f0a1e",
+              "id": "w05sub",
               "elType": "widget",
               "widgetType": "text-editor",
-              "isInner": false,
               "settings": {
-                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:600px;margin:12px auto 48px;\">Frische Testberichte direkt aus der Redaktion &ndash; regelm&auml;&szlig;ig aktualisiert.</p>"
+                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:580px;margin:12px auto 48px;\">Frisch getestet und ver&ouml;ffentlicht &ndash; unsere aktuellsten Berichte auf einen Blick.</p>"
               },
               "elements": []
             },
             {
-              "id": "e9f0a1f",
-              "elType": "section",
-              "isInner": true,
+              "id": "w05wc",
+              "elType": "widget",
+              "widgetType": "shortcode",
               "settings": {
-                "gap": "extended",
-                "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+                "shortcode": "[products limit=\"3\" columns=\"3\" orderby=\"date\" order=\"DESC\"]",
+                "_css_classes": "ke-products-wrap"
               },
-              "elements": [
-                {
-                  "id": "e9f0a1g",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "e9f0a1h",
-                      "elType": "widget",
-                      "widgetType": "html",
-                      "isInner": true,
-                      "settings": {
-                        "html": "<div class=\"ke-post-card\"><div class=\"ke-post-category\">Online Marketing</div><h3 class=\"ke-post-title\"><a href=\"/testberichte/digistore24-kurs-erfahrungen/\">Digistore24 Kurs-Erfahrungen 2026 &ndash; Lohnt es sich?</a></h3><p class=\"ke-post-excerpt\">Wir haben den meistverkauften Digistore24-Kurs getestet und berichten ehrlich &uuml;ber Qualit&auml;t, Preis und Mehrwert.</p><div class=\"ke-post-meta\"><span class=\"ke-post-rating\">&#9733; 4,7</span><span class=\"ke-post-date\">Mai 2026</span></div><a href=\"/testberichte/digistore24-kurs-erfahrungen/\" class=\"ke-post-link\">Weiterlesen &#8594;</a></div>"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "e9f0a1i",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "e9f0a1j",
-                      "elType": "widget",
-                      "widgetType": "html",
-                      "isInner": true,
-                      "settings": {
-                        "html": "<div class=\"ke-post-card\"><div class=\"ke-post-category\">Programmierung</div><h3 class=\"ke-post-title\"><a href=\"/testberichte/udemy-python-kurs-test/\">Udemy Python Kurs Test 2026 &ndash; Der vollst&auml;ndige Vergleich</a></h3><p class=\"ke-post-excerpt\">Welcher Python-Kurs auf Udemy ist wirklich sein Geld wert? Unser ausf&uuml;hrlicher Vergleich zeigt alle Details.</p><div class=\"ke-post-meta\"><span class=\"ke-post-rating\">&#9733; 4,8</span><span class=\"ke-post-date\">April 2026</span></div><a href=\"/testberichte/udemy-python-kurs-test/\" class=\"ke-post-link\">Weiterlesen &#8594;</a></div>"
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "e9f0a1k",
-                  "elType": "column",
-                  "isInner": true,
-                  "settings": { "_column_size": 33, "_inline_size": null },
-                  "elements": [
-                    {
-                      "id": "e9f0a1l",
-                      "elType": "widget",
-                      "widgetType": "html",
-                      "isInner": true,
-                      "settings": {
-                        "html": "<div class=\"ke-post-card\"><div class=\"ke-post-category\">Business</div><h3 class=\"ke-post-title\"><a href=\"/testberichte/copywriting-kurs-erfahrungen/\">Copywriting Kurs Erfahrungen 2026 &ndash; Lohnt sich das?</a></h3><p class=\"ke-post-excerpt\">Werbetexten lernen mit Online-Kursen: Wir haben die beliebtesten deutschen Copywriting-Kurse getestet.</p><div class=\"ke-post-meta\"><span class=\"ke-post-rating\">&#9733; 4,5</span><span class=\"ke-post-date\">April 2026</span></div><a href=\"/testberichte/copywriting-kurs-erfahrungen/\" class=\"ke-post-link\">Weiterlesen &#8594;</a></div>"
-                      },
-                      "elements": []
-                    }
-                  ]
-                }
-              ]
+              "elements": []
             },
             {
-              "id": "e9f0a1m",
+              "id": "w05cta",
               "elType": "widget",
               "widgetType": "html",
-              "isInner": false,
               "settings": {
-                "html": "<div style=\"text-align:center;margin-top:48px;\"><a href=\"/testberichte/\" style=\"display:inline-block;background:#1e40af;color:#ffffff;font-weight:700;font-size:16px;padding:16px 40px;border-radius:8px;text-decoration:none;\">Alle Testberichte ansehen &#8594;</a></div>"
+                "html": "<div style=\"text-align:center;margin-top:48px;\"><a href=\"/shop/?orderby=date\" style=\"display:inline-block;background:#1e40af;color:#ffffff;font-weight:700;font-size:16px;padding:16px 40px;border-radius:8px;text-decoration:none;\">Alle neuen Berichte sehen &#8594;</a></div>"
               },
               "elements": []
             }
@@ -711,8 +393,9 @@
         }
       ]
     },
+
     {
-      "id": "f1a2b3c",
+      "id": "s06marvin",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -722,115 +405,185 @@
       },
       "elements": [
         {
-          "id": "f1a2b3d",
+          "id": "c06left",
+          "elType": "column",
+          "isInner": false,
+          "settings": {
+            "_column_size": 40,
+            "_inline_size": null,
+            "content_position": "middle",
+            "padding": { "unit": "px", "top": "0", "right": "40", "bottom": "0", "left": "0", "isLinked": false }
+          },
+          "elements": [
+            {
+              "id": "w06img",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"background:linear-gradient(135deg,#1e3a8a,#1e40af);border-radius:20px;padding:48px 32px;text-align:center;\"><div style=\"width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,0.15);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;\"><i class=\"fas fa-user\" style=\"font-size:48px;color:rgba(255,255,255,0.7);\"></i></div><div style=\"color:#fff;font-size:22px;font-weight:800;margin-bottom:6px;\">Marvin Seelh&ouml;fer</div><div style=\"color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:24px;\">Online-Marketing-Analyst</div><div style=\"display:flex;flex-direction:column;gap:10px;\"><a href=\"https://www.youtube.com/c/KursErfahrungen\" target=\"_blank\" style=\"display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;\"><i class=\"fab fa-youtube\" style=\"color:#ef4444;\"></i> YouTube-Kanal</a><a href=\"https://www.provenexpert.com/de-de/kurs-erfahrungen-com/\" target=\"_blank\" style=\"display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;\"><i class=\"fas fa-star\" style=\"color:#f59e0b;\"></i> ProvenExpert Profil</a><a href=\"/kontakt/\" style=\"display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.12);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;\"><i class=\"fas fa-envelope\"></i> Kontakt aufnehmen</a></div></div>"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "c06right",
+          "elType": "column",
+          "isInner": false,
+          "settings": { "_column_size": 60, "_inline_size": null, "content_position": "middle" },
+          "elements": [
+            {
+              "id": "w06h2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Wer steckt hinter kurs-erfahrungen.com?",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#1e293b",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 34 },
+                "typography_font_size_mobile": { "unit": "px", "size": 24 },
+                "typography_font_weight": "800",
+                "_margin": { "unit": "px", "top": "0", "right": "0", "bottom": "20", "left": "0", "isLinked": false }
+              },
+              "elements": []
+            },
+            {
+              "id": "w06text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#334155;font-size:16px;line-height:1.75;margin-bottom:16px;\">Ich bin <strong>Marvin Seelh&ouml;fer</strong>, Online-Marketing-Analyst aus Deutschland. Seit 2021 analysiere ich Online-Kurse, Coaching-Programme und digitale Gesch&auml;ftsmodelle im deutschsprachigen Raum &ndash; mit einem klaren Ziel: dir zu zeigen, welche Produkte wirklich halten, was sie versprechen.</p><p style=\"color:#334155;font-size:16px;line-height:1.75;margin-bottom:16px;\">Meine Bewertungen basieren auf echter Praxis: Ich kaufe jeden Kurs mit eigenem Geld, arbeite ihn vollst&auml;ndig durch und teste Support &amp; Community. <strong>Kein Gratiszugang, keine bezahlten Bewertungen.</strong></p><p style=\"color:#334155;font-size:16px;line-height:1.75;\">Durch eigene digitale Angebote und Affiliate-Partnerschaften habe ich &uuml;ber 700.000&nbsp;&euro; Umsatz generiert &ndash; ich wei&szlig;, wovon ich spreche.</p>"
+              },
+              "elements": []
+            },
+            {
+              "id": "w06stats",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;\"><div style=\"background:#f1f5f9;border-radius:12px;padding:20px;\"><div style=\"font-size:26px;font-weight:800;color:#1e40af;\">500+</div><div style=\"font-size:13px;color:#64748b;margin-top:4px;\">Kurse getestet</div></div><div style=\"background:#f1f5f9;border-radius:12px;padding:20px;\"><div style=\"font-size:26px;font-weight:800;color:#1e40af;\">700.000&nbsp;&euro;+</div><div style=\"font-size:13px;color:#64748b;margin-top:4px;\">eigener Umsatz durch dig. Angebote</div></div><div style=\"background:#f1f5f9;border-radius:12px;padding:20px;\"><div style=\"font-size:26px;font-weight:800;color:#1e40af;\">2021</div><div style=\"font-size:13px;color:#64748b;margin-top:4px;\">Gr&uuml;ndungsjahr</div></div><div style=\"background:#f1f5f9;border-radius:12px;padding:20px;\"><div style=\"font-size:26px;font-weight:800;color:#1e40af;\">100&nbsp;%</div><div style=\"font-size:13px;color:#64748b;margin-top:4px;\">unabh&auml;ngige Bewertungen</div></div></div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "s07method",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f1f5f9",
+        "padding": { "unit": "px", "top": "80", "right": "0", "bottom": "80", "left": "0", "isLinked": false }
+      },
+      "elements": [
+        {
+          "id": "c07a",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 100, "_inline_size": null },
           "elements": [
             {
-              "id": "f1a2b3e",
+              "id": "w07h2",
               "elType": "widget",
               "widgetType": "heading",
-              "isInner": false,
               "settings": {
-                "title": "So testen wir Online-Kurse",
+                "title": "So teste ich Online-Kurse",
                 "header_size": "h2",
                 "align": "center",
                 "title_color": "#1e293b",
                 "typography_typography": "custom",
                 "typography_font_family": "Inter",
                 "typography_font_size": { "unit": "px", "size": 38 },
-                "typography_font_size_mobile": { "unit": "px", "size": 28 },
+                "typography_font_size_mobile": { "unit": "px", "size": 26 },
                 "typography_font_weight": "800"
               },
               "elements": []
             },
             {
-              "id": "f1a2b3f",
+              "id": "w07sub",
               "elType": "widget",
               "widgetType": "text-editor",
-              "isInner": false,
               "settings": {
-                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:600px;margin:12px auto 56px;\">Unsere Methodik &ndash; transparent und nachvollziehbar. Kein Kurs wird ohne vollst&auml;ndige Pr&uuml;fung empfohlen.</p>"
+                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:620px;margin:12px auto 52px;\">Meine Methodik ist transparent &ndash; jeder Kurs durchl&auml;uft denselben strukturierten Testprozess, bevor eine Empfehlung ausgesprochen wird.</p>"
               },
               "elements": []
             },
             {
-              "id": "f1a2b3g",
+              "id": "inner07",
               "elType": "section",
               "isInner": true,
-              "settings": {
-                "gap": "extended",
-                "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
-              },
+              "settings": { "gap": "extended" },
               "elements": [
                 {
-                  "id": "f1a2b3h",
+                  "id": "ic07a",
                   "elType": "column",
                   "isInner": true,
                   "settings": { "_column_size": 25, "_inline_size": null },
                   "elements": [
                     {
-                      "id": "f1a2b3i",
+                      "id": "iw07a",
                       "elType": "widget",
                       "widgetType": "html",
-                      "isInner": true,
                       "settings": {
-                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-number\">01</div><div class=\"ke-step-icon\"><i class=\"fas fa-play-circle\"></i></div><h4 class=\"ke-step-title\">Kurs vollst&auml;ndig durcharbeiten</h4><p class=\"ke-step-desc\">Wir absolvieren jeden Kurs komplett &ndash; kein Überspringen von Modulen.</p></div>"
+                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-num\">01</div><div class=\"ke-step-ico\"><i class=\"fas fa-credit-card\"></i></div><h4 class=\"ke-step-title\">Kurs selbst kaufen</h4><p class=\"ke-step-desc\">Ich zahle jeden Kurs aus eigener Tasche &ndash; kein Herstellerkontakt, keine kostenlose Bereitstellung.</p></div>"
                       },
                       "elements": []
                     }
                   ]
                 },
                 {
-                  "id": "f1a2b3j",
+                  "id": "ic07b",
                   "elType": "column",
                   "isInner": true,
                   "settings": { "_column_size": 25, "_inline_size": null },
                   "elements": [
                     {
-                      "id": "f1a2b3k",
+                      "id": "iw07b",
                       "elType": "widget",
                       "widgetType": "html",
-                      "isInner": true,
                       "settings": {
-                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-number\">02</div><div class=\"ke-step-icon\"><i class=\"fas fa-comments\"></i></div><h4 class=\"ke-step-title\">Support &amp; Community testen</h4><p class=\"ke-step-desc\">Wie gut hilft der Anbieter bei Fragen? Wir stellen echte Support-Anfragen.</p></div>"
+                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-num\">02</div><div class=\"ke-step-ico\"><i class=\"fas fa-play-circle\"></i></div><h4 class=\"ke-step-title\">Vollst&auml;ndig durcharbeiten</h4><p class=\"ke-step-desc\">Jedes Modul, jede Aufgabe &ndash; ich &uuml;berspringe nichts und arbeite den Kurs wie ein echter Teilnehmer.</p></div>"
                       },
                       "elements": []
                     }
                   ]
                 },
                 {
-                  "id": "f1a2b3l",
+                  "id": "ic07c",
                   "elType": "column",
                   "isInner": true,
                   "settings": { "_column_size": 25, "_inline_size": null },
                   "elements": [
                     {
-                      "id": "f1a2b3m",
+                      "id": "iw07c",
                       "elType": "widget",
                       "widgetType": "html",
-                      "isInner": true,
                       "settings": {
-                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-number\">03</div><div class=\"ke-step-icon\"><i class=\"fas fa-balance-scale\"></i></div><h4 class=\"ke-step-title\">Preis-Leistung bewerten</h4><p class=\"ke-step-desc\">Ist der Kurs seinen Preis wert? Wir vergleichen mit Alternativen.</p></div>"
+                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-num\">03</div><div class=\"ke-step-ico\"><i class=\"fas fa-comments\"></i></div><h4 class=\"ke-step-title\">Support &amp; Community</h4><p class=\"ke-step-desc\">Ich stelle echte Support-Anfragen und bewerte die Reaktionszeit und Qualit&auml;t der Hilfestellung.</p></div>"
                       },
                       "elements": []
                     }
                   ]
                 },
                 {
-                  "id": "f1a2b3n",
+                  "id": "ic07d",
                   "elType": "column",
                   "isInner": true,
                   "settings": { "_column_size": 25, "_inline_size": null },
                   "elements": [
                     {
-                      "id": "f1a2b3o",
+                      "id": "iw07d",
                       "elType": "widget",
                       "widgetType": "html",
-                      "isInner": true,
                       "settings": {
-                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-number\">04</div><div class=\"ke-step-icon\"><i class=\"fas fa-pen-alt\"></i></div><h4 class=\"ke-step-title\">Ehrliches Fazit schreiben</h4><p class=\"ke-step-desc\">Kein Schönreden: Wir nennen Vor- und Nachteile ohne Einschr&auml;nkungen.</p></div>"
+                        "html": "<div class=\"ke-step-card\"><div class=\"ke-step-num\">04</div><div class=\"ke-step-ico\"><i class=\"fas fa-pen-alt\"></i></div><h4 class=\"ke-step-title\">Ehrliches Fazit</h4><p class=\"ke-step-desc\">Ich ver&ouml;ffentliche meine Erfahrungen ungefiltert &ndash; positiv wie negativ, unabh&auml;ngig von der Provision.</p></div>"
                       },
                       "elements": []
                     }
@@ -842,8 +595,65 @@
         }
       ]
     },
+
     {
-      "id": "g2h3i4j",
+      "id": "s08experten",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": { "unit": "px", "top": "80", "right": "0", "bottom": "80", "left": "0", "isLinked": false }
+      },
+      "elements": [
+        {
+          "id": "c08a",
+          "elType": "column",
+          "isInner": false,
+          "settings": { "_column_size": 100, "_inline_size": null },
+          "elements": [
+            {
+              "id": "w08h2",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Getestete Experten & Anbieter",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#1e293b",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": { "unit": "px", "size": 38 },
+                "typography_font_size_mobile": { "unit": "px", "size": 26 },
+                "typography_font_weight": "800"
+              },
+              "elements": []
+            },
+            {
+              "id": "w08sub",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align:center;color:#64748b;font-size:18px;max-width:580px;margin:12px auto 48px;\">Bekannte Coaches, Trainer und Kursanbieter im deutschsprachigen Raum &ndash; ehrlich bewertet.</p>"
+              },
+              "elements": []
+            },
+            {
+              "id": "w08logos",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div style=\"display:flex;flex-wrap:wrap;gap:12px;justify-content:center;\">\n  <a href=\"/experte/said-shiripour/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;transition:all .2s;\">Said Shiripour</a>\n  <a href=\"/experte/gunnar-kessler/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Gunnar Kessler</a>\n  <a href=\"/experte/maxim-mankevich/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Maxim Mankevich</a>\n  <a href=\"/experte/baulig-consulting-gmbh/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Baulig Consulting</a>\n  <a href=\"/experte/fynn-roeber/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Fynn R&ouml;ber</a>\n  <a href=\"/experte/investment-punk/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Investment Punk</a>\n  <a href=\"/experte/juergen-wechsler/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">J&uuml;rgen Wechsler</a>\n  <a href=\"/experte/marc-schippke/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Marc Schippke</a>\n  <a href=\"/experte/sven-schnurr/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Sven Schnurr</a>\n  <a href=\"/experte/lernakademie-plus/\" style=\"display:inline-flex;align-items:center;background:#f1f5f9;color:#334155;font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;text-decoration:none;border:1px solid #e2e8f0;\">Lernakademie Plus</a>\n  <a href=\"/experte/\" style=\"display:inline-flex;align-items:center;background:#1e40af;color:#fff;font-size:14px;font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none;\">Alle Experten &#8594;</a>\n</div>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "s09faq",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -853,16 +663,15 @@
       },
       "elements": [
         {
-          "id": "g2h3i4k",
+          "id": "c09a",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 100, "_inline_size": null },
           "elements": [
             {
-              "id": "g2h3i4l",
+              "id": "w09h2",
               "elType": "widget",
               "widgetType": "heading",
-              "isInner": false,
               "settings": {
                 "title": "Häufig gestellte Fragen",
                 "header_size": "h2",
@@ -871,38 +680,42 @@
                 "typography_typography": "custom",
                 "typography_font_family": "Inter",
                 "typography_font_size": { "unit": "px", "size": 38 },
-                "typography_font_size_mobile": { "unit": "px", "size": 28 },
+                "typography_font_size_mobile": { "unit": "px", "size": 26 },
                 "typography_font_weight": "800",
                 "_margin": { "unit": "px", "top": "0", "right": "0", "bottom": "40", "left": "0", "isLinked": false }
               },
               "elements": []
             },
             {
-              "id": "g2h3i4m",
+              "id": "w09faq",
               "elType": "widget",
               "widgetType": "accordion",
-              "isInner": false,
               "settings": {
                 "tabs": [
                   {
                     "_id": "faq01",
-                    "tab_title": "Wie findet ihr die besten Online-Kurse?",
-                    "tab_content": "Unser Team absolviert jeden Kurs vollständig und bewertet ihn nach festen Kriterien: Inhalt & Qualität, Preis-Leistung, Support, Community und praktischer Nutzen. Wir kaufen alle Kurse selbst und erhalten keine kostenlosen Zugänge vom Anbieter, damit unsere Bewertungen 100% unabhängig sind."
+                    "tab_title": "Kaufst du die Kurse wirklich selbst?",
+                    "tab_content": "Ja – jeder Kurs auf kurs-erfahrungen.com wurde von mir persönlich mit eigenem Geld gekauft. Ich erhalte keinen kostenlosen Zugang vom Anbieter und stehe in keinem Vertragsverhältnis mit den Anbietern. Nur so kann ich sicherstellen, dass meine Bewertungen 100 % unabhängig sind."
                   },
                   {
                     "_id": "faq02",
-                    "tab_title": "Sind eure Bewertungen wirklich unabhängig?",
-                    "tab_content": "Ja. Wir finanzieren uns über Affiliate-Links – das bedeutet, wenn du über unsere Links einen Kurs kaufst, erhalten wir eine Provision. Das ändert aber nichts an unserer Bewertung: Wir empfehlen nur Kurse, die wir selbst für gut befunden haben. Negative Erfahrungen werden genauso veröffentlicht wie positive."
+                    "tab_title": "Wie verdient kurs-erfahrungen.com Geld?",
+                    "tab_content": "Diese Webseite finanziert sich über Affiliate-Links. Wenn du über einen meiner Links einen Kurs kaufst, erhalte ich eine Provision – für dich entstehen dabei keine Mehrkosten. Wichtig: Meine Bewertungen werden davon nicht beeinflusst. Ich empfehle ausschließlich Produkte, die ich nach meinem Test für empfehlenswert halte. Negative Erfahrungen veröffentliche ich genauso wie positive."
                   },
                   {
                     "_id": "faq03",
-                    "tab_title": "Wie verdient kurs-erfahrungen.com Geld?",
-                    "tab_content": "Wir verdienen Geld durch Affiliate-Provisionen. Wenn du über einen unserer Links einen Kurs kaufst, erhalten wir eine kleine Provision – für dich ohne Mehrkosten. Diese Einnahmen ermöglichen es uns, die Webseite kostenlos und werbefrei zu betreiben."
+                    "tab_title": "Was passiert, wenn ein Kurs schlecht ist?",
+                    "tab_content": "Dann schreibe ich einen ehrlichen negativen Testbericht. Ich mache keine Ausnahmen, nur weil ich bei einem Anbieter eine höhere Provision verdiene. Schlechte Kurse werden klar als solche gekennzeichnet – zum Schutz meiner Leser."
                   },
                   {
                     "_id": "faq04",
-                    "tab_title": "Kann ich eigene Kurs-Erfahrungen einreichen?",
-                    "tab_content": "Ja, wir freuen uns über Lesererfahrungen! Schreib uns über unser Kontaktformular oder per E-Mail. Echte Nutzererfahrungen helfen anderen Lesern bei der Entscheidung. Wir prüfen alle Einsendungen und veröffentlichen authentische Bewertungen."
+                    "tab_title": "Kann ich einen Kurs zur Bewertung einreichen?",
+                    "tab_content": "Du kannst mir über das Kontaktformular einen Kurs vorschlagen. Ich entscheide dann, ob er in meine Testwarteschlange aufgenommen wird. Ich nehme keinen bezahlten Zugang und keine Provision als Gegenleistung für eine positive Bewertung an."
+                  },
+                  {
+                    "_id": "faq05",
+                    "tab_title": "Wie werden die Produkte als WooCommerce-Produkte angelegt?",
+                    "tab_content": "Jeder Erfahrungsbericht ist als WooCommerce-Produkt hinterlegt. So profitierst du von der nativen Bewertungsfunktion, strukturierten Kategorien und einer einheitlichen Darstellung aller Testberichte. Die Produktseite enthält den vollständigen Testbericht, Video-Review und alle relevanten Infos zum Kurs."
                   }
                 ],
                 "selected_icon": { "value": "fas fa-plus", "library": "fa-solid" },
@@ -915,8 +728,9 @@
         }
       ]
     },
+
     {
-      "id": "h4i5j6k",
+      "id": "s10nl",
       "elType": "section",
       "isInner": false,
       "settings": {
@@ -928,47 +742,44 @@
       },
       "elements": [
         {
-          "id": "h4i5j6l",
+          "id": "c10a",
           "elType": "column",
           "isInner": false,
           "settings": { "_column_size": 100, "_inline_size": null, "content_position": "middle" },
           "elements": [
             {
-              "id": "h4i5j6m",
+              "id": "w10h2",
               "elType": "widget",
               "widgetType": "heading",
-              "isInner": false,
               "settings": {
-                "title": "Keine Kurs-Empfehlung verpassen",
+                "title": "Keinen Testbericht verpassen",
                 "header_size": "h2",
                 "align": "center",
                 "title_color": "#ffffff",
                 "typography_typography": "custom",
                 "typography_font_family": "Inter",
                 "typography_font_size": { "unit": "px", "size": 40 },
-                "typography_font_size_mobile": { "unit": "px", "size": 28 },
+                "typography_font_size_mobile": { "unit": "px", "size": 26 },
                 "typography_font_weight": "800",
                 "_margin": { "unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false }
               },
               "elements": []
             },
             {
-              "id": "h4i5j6n",
+              "id": "w10sub",
               "elType": "widget",
               "widgetType": "text-editor",
-              "isInner": false,
               "settings": {
-                "editor": "<p style=\"text-align:center;color:rgba(255,255,255,0.85);font-size:18px;max-width:580px;margin:0 auto 40px;\">Trag dich in unseren Newsletter ein und erhalte die besten Kurs-Empfehlungen direkt in dein Postfach &ndash; kostenlos &amp; jederzeit abbestellbar.</p>"
+                "editor": "<p style=\"text-align:center;color:rgba(255,255,255,0.82);font-size:18px;max-width:540px;margin:0 auto 40px;\">Trage dich ein und erhalte neue Testberichte von Marvin direkt in dein Postfach &ndash; kostenlos &amp; jederzeit abmeldbar.</p>"
               },
               "elements": []
             },
             {
-              "id": "h4i5j6o",
+              "id": "w10form",
               "elType": "widget",
               "widgetType": "html",
-              "isInner": false,
               "settings": {
-                "html": "<div class=\"ke-newsletter-form\"><form style=\"display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto;\"><input type=\"email\" placeholder=\"Deine E-Mail-Adresse\" style=\"flex:1;min-width:240px;padding:16px 20px;border-radius:8px;border:none;font-size:16px;outline:none;\" required /><button type=\"submit\" style=\"background:#f59e0b;color:#0f172a;font-weight:700;font-size:16px;padding:16px 32px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap;\">Jetzt anmelden</button></form><p style=\"text-align:center;color:rgba(255,255,255,0.6);font-size:13px;margin-top:16px;\">&#128274; Kein Spam. Datenschutz garantiert. Jederzeit abmeldbar.</p></div>"
+                "html": "<div style=\"max-width:520px;margin:0 auto;\"><form style=\"display:flex;gap:10px;flex-wrap:wrap;justify-content:center;\" onsubmit=\"return false;\"><input type=\"email\" placeholder=\"Deine E-Mail-Adresse\" style=\"flex:1;min-width:220px;padding:16px 18px;border-radius:8px;border:none;font-size:16px;font-family:inherit;\" required /><button type=\"submit\" style=\"background:#f59e0b;color:#0f172a;font-weight:700;font-size:16px;padding:16px 30px;border-radius:8px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;\">Anmelden</button></form><p style=\"text-align:center;color:rgba(255,255,255,0.55);font-size:13px;margin-top:14px;\">&#128274; Kein Spam &bull; Datenschutzkonform &bull; Jederzeit abmeldbar</p></div>"
               },
               "elements": []
             }
@@ -976,6 +787,7 @@
         }
       ]
     }
+
   ],
   "page_settings": {
     "hide_title": "yes",

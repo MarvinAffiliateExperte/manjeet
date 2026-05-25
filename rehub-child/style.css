@@ -462,6 +462,140 @@ header.header {
 }
 
 /* =========================================================
+   WOOCOMMERCE PRODUKT-KARTEN (Homepage-Shortcode)
+   ========================================================= */
+.ke-products-wrap ul.products,
+.woocommerce .ke-products-wrap ul.products {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+.ke-products-wrap ul.products li.product {
+  background: var(--ke-white) !important;
+  border-radius: var(--ke-radius-lg) !important;
+  padding: 24px !important;
+  box-shadow: var(--ke-shadow) !important;
+  border: 1px solid var(--ke-gray-200) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  float: none !important;
+  width: 100% !important;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition) !important;
+}
+.ke-products-wrap ul.products li.product:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--ke-shadow-lg) !important;
+}
+.ke-products-wrap ul.products li.product img {
+  border-radius: var(--ke-radius) !important;
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+}
+.ke-products-wrap ul.products .woocommerce-loop-product__title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--ke-dark) !important;
+  line-height: 1.35 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.ke-products-wrap .star-rating span::before {
+  color: var(--ke-amber) !important;
+}
+.ke-products-wrap .price,
+.ke-products-wrap .woocommerce-Price-amount {
+  color: var(--ke-gray-500) !important;
+  font-size: 13px !important;
+}
+.ke-products-wrap ul.products li.product .button,
+.ke-products-wrap ul.products li.product a.button {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  background: var(--ke-blue-600) !important;
+  color: var(--ke-white) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 12px 16px !important;
+  border-radius: var(--ke-radius) !important;
+  text-decoration: none !important;
+  border: none !important;
+  margin-top: auto !important;
+  transition: background var(--ke-transition) !important;
+}
+.ke-products-wrap ul.products li.product .button:hover,
+.ke-products-wrap ul.products li.product a.button:hover {
+  background: var(--ke-blue-500) !important;
+}
+
+/* =========================================================
+   WOOCOMMERCE KATEGORIEN (Homepage-Shortcode)
+   ========================================================= */
+.ke-categories-wrap ul.product-categories {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.ke-categories-wrap ul.product-categories li.product-category {
+  background: var(--ke-white) !important;
+  border: 1px solid var(--ke-gray-200) !important;
+  border-radius: var(--ke-radius-lg) !important;
+  padding: 28px 22px !important;
+  box-shadow: var(--ke-shadow-sm) !important;
+  text-align: center !important;
+  margin: 0 !important;
+  float: none !important;
+  width: 100% !important;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition), border-color var(--ke-transition) !important;
+}
+.ke-categories-wrap ul.product-categories li.product-category:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: var(--ke-shadow) !important;
+  border-color: var(--ke-blue-600) !important;
+}
+.ke-categories-wrap ul.product-categories li.product-category img {
+  border-radius: var(--ke-radius) !important;
+  width: 100% !important;
+  height: 120px !important;
+  object-fit: cover !important;
+  margin-bottom: 14px !important;
+}
+.ke-categories-wrap .woocommerce-loop-category__title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--ke-dark) !important;
+}
+.ke-categories-wrap mark {
+  background: none !important;
+  color: var(--ke-gray-500) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 900px) {
+  .ke-products-wrap ul.products,
+  .ke-categories-wrap ul.product-categories {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  .ke-products-wrap ul.products,
+  .ke-categories-wrap ul.product-categories {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================
    PRINT & ACCESSIBILITY
    ========================================================= */
 @media print {
