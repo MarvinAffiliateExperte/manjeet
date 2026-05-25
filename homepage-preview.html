@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurs Erfahrungen 2026 – Homepage Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ── TOKENS ── */
+:root{
+  --blue-900:#0f172a;--blue-800:#1e3a8a;--blue-600:#1e40af;
+  --blue-500:#2563eb;--blue-50:#eff6ff;
+  --amber:#f59e0b;--amber-dark:#d97706;
+  --dark:#1e293b;--gray-700:#334155;--gray-500:#64748b;
+  --gray-200:#e2e8f0;--gray-100:#f1f5f9;--white:#ffffff;
+  --r:10px;--rl:16px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
+  --shadow:0 4px 16px rgba(0,0,0,.10),0 1px 4px rgba(0,0,0,.06);
+  --shadow-lg:0 10px 40px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.07);
+  --t:.22s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.65;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto}
+
+/* ── LAYOUT ── */
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+section{width:100%}
+
+/* ── FAKE NAV ── */
+.nav{background:var(--white);border-bottom:1px solid var(--gray-200);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm)}
+.nav-logo{font-weight:800;font-size:20px;color:var(--blue-600)}
+.nav-logo span{color:var(--amber)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--gray-700);transition:color var(--t)}
+.nav-links a:hover{color:var(--blue-600)}
+.nav-cta{background:var(--blue-600);color:#fff !important;padding:9px 22px;border-radius:var(--r);font-size:14px;font-weight:700;transition:background var(--t),transform var(--t)}
+.nav-cta:hover{background:var(--blue-500);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(145deg,var(--blue-900) 0%,var(--blue-800) 100%);min-height:640px;display:flex;align-items:center;text-align:center;padding:100px 24px}
+.hero h1{font-size:clamp(30px,5vw,54px);font-weight:800;color:#fff;line-height:1.15;max-width:800px;margin:0 auto 20px}
+.hero h1 span{color:var(--amber)}
+.hero p{font-size:clamp(16px,2vw,20px);color:rgba(255,255,255,.82);max-width:640px;margin:0 auto 44px}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-amber{background:var(--amber);color:var(--blue-900) !important;font-weight:700;font-size:17px;padding:16px 40px;border-radius:var(--r);transition:background var(--t),transform var(--t),box-shadow var(--t)}
+.btn-amber:hover{background:var(--amber-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,.35)}
+.btn-outline{background:transparent;color:#fff !important;font-weight:600;font-size:17px;padding:16px 40px;border-radius:var(--r);border:2px solid rgba(255,255,255,.5);transition:background var(--t),border-color var(--t)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.9)}
+.hero-trust{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.hero-trust span{color:rgba(255,255,255,.65);font-size:14px}
+.hero-trust span::before{content:'✓ ';color:var(--amber)}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--white);border-bottom:1px solid var(--gray-200);padding:48px 24px}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.trust-item{}
+.trust-icon{font-size:36px;color:var(--blue-600);margin-bottom:12px}
+.trust-icon.amber{color:var(--amber)}
+.trust-num{font-size:26px;font-weight:800;color:var(--dark);line-height:1.2}
+.trust-label{font-size:14px;color:var(--gray-500);margin-top:4px}
+
+/* ── SECTION HEADER ── */
+.section-head{text-align:center;margin-bottom:48px}
+.section-head h2{font-size:clamp(26px,3.5vw,38px);font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:12px}
+.section-head p{font-size:18px;color:var(--gray-500);max-width:580px;margin:0 auto}
+
+/* ── SECTIONS ── */
+.section-gray{background:var(--gray-100);padding:80px 0}
+.section-white{background:var(--white);padding:80px 0}
+
+/* ── COURSE CARDS ── */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.course-card{background:var(--white);border-radius:var(--rl);padding:30px 26px;box-shadow:var(--shadow);border:1px solid var(--gray-200);display:flex;flex-direction:column;gap:14px;transition:transform var(--t),box-shadow var(--t)}
+.course-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.course-card.featured{border-color:var(--blue-600);box-shadow:0 4px 20px rgba(30,64,175,.15)}
+.course-badge{display:inline-block;background:var(--blue-50);color:var(--blue-600);font-size:11px;font-weight:700;letter-spacing:.05em;padding:4px 12px;border-radius:99px;text-transform:uppercase;width:fit-content}
+.course-badge.gold{background:#fffbeb;color:var(--amber-dark)}
+.course-icon{font-size:34px;color:var(--blue-600)}
+.course-title{font-size:19px;font-weight:700;color:var(--dark);line-height:1.3}
+.course-rating{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--gray-700)}
+.stars{color:var(--amber);letter-spacing:-1px}
+.course-desc{color:var(--gray-500);font-size:14px;flex:1;line-height:1.6}
+.course-meta{display:flex;gap:14px;flex-wrap:wrap}
+.course-meta span{font-size:12px;color:var(--gray-500);font-weight:500}
+.course-btn{display:block;text-align:center;background:var(--blue-600);color:#fff !important;font-weight:700;font-size:14px;padding:13px 20px;border-radius:var(--r);transition:background var(--t),transform var(--t)}
+.course-btn:hover{background:var(--blue-500);transform:translateY(-1px)}
+.cta-wrap{text-align:center;margin-top:48px}
+.btn-blue{display:inline-block;background:var(--blue-600);color:#fff;font-weight:700;font-size:16px;padding:16px 40px;border-radius:var(--r);transition:background var(--t),transform var(--t)}
+.btn-blue:hover{background:var(--blue-500);transform:translateY(-2px)}
+
+/* ── CATEGORY CARDS ── */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cat-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--rl);padding:26px 22px;box-shadow:var(--shadow-sm);display:flex;align-items:flex-start;gap:16px;transition:transform var(--t),box-shadow var(--t),border-color var(--t)}
+.cat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue-600)}
+.cat-icon{font-size:30px;color:var(--blue-600);flex-shrink:0;margin-top:2px}
+.cat-info h4{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.cat-info p{font-size:13px;color:var(--gray-500)}
+.cat-grid-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+
+/* ── POST CARDS ── */
+.post-card{background:var(--white);border-radius:var(--rl);padding:28px 24px;box-shadow:var(--shadow);border:1px solid var(--gray-200);display:flex;flex-direction:column;gap:12px;transition:transform var(--t),box-shadow var(--t)}
+.post-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.post-cat{display:inline-block;background:var(--blue-50);color:var(--blue-600);font-size:11px;font-weight:700;padding:4px 12px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em;width:fit-content}
+.post-title{font-size:17px;font-weight:700;color:var(--dark);line-height:1.4;flex:1}
+.post-title:hover{color:var(--blue-600)}
+.post-excerpt{color:var(--gray-500);font-size:13px;line-height:1.6}
+.post-meta{display:flex;gap:14px;align-items:center;font-size:12px}
+.post-rating{color:var(--amber-dark);font-weight:700}
+.post-date{color:var(--gray-500)}
+.post-link{font-size:13px;font-weight:700;color:var(--blue-600)}
+.post-link:hover{color:var(--blue-500)}
+
+/* ── STEPS ── */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step-card{text-align:center;padding:36px 20px;background:var(--white);border-radius:var(--rl);border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;align-items:center;gap:14px;transition:transform var(--t),box-shadow var(--t)}
+.step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.step-num{font-size:12px;font-weight:800;color:var(--blue-600);letter-spacing:.12em;background:var(--blue-50);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.step-ico{font-size:30px;color:var(--blue-600)}
+.step-title{font-size:16px;font-weight:700;color:var(--dark);line-height:1.35}
+.step-desc{font-size:13px;color:var(--gray-500);line-height:1.6}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;gap:10px;max-width:800px;margin:0 auto}
+.faq-item{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--r);overflow:hidden}
+.faq-q{width:100%;text-align:left;padding:20px 24px;font-size:16px;font-weight:600;color:var(--dark);background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color var(--t),background var(--t)}
+.faq-q:hover,.faq-q.open{color:var(--blue-600);background:var(--blue-50)}
+.faq-q i{font-size:14px;transition:transform var(--t)}
+.faq-q.open i{transform:rotate(45deg)}
+.faq-a{padding:0 24px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:15px;color:var(--gray-700);line-height:1.7;border-top:0px solid var(--gray-200)}
+.faq-a.open{padding:20px 24px;max-height:300px;border-top:1px solid var(--gray-200)}
+
+/* ── NEWSLETTER ── */
+.newsletter{background:linear-gradient(135deg,var(--blue-800) 0%,#4f46e5 100%);padding:100px 24px;text-align:center}
+.newsletter h2{font-size:clamp(26px,3.5vw,40px);font-weight:800;color:#fff;margin-bottom:16px}
+.newsletter p{font-size:18px;color:rgba(255,255,255,.82);max-width:540px;margin:0 auto 40px}
+.nl-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto}
+.nl-form input{flex:1;min-width:220px;padding:16px 20px;border-radius:var(--r);border:none;font-size:16px;font-family:'Inter',sans-serif;outline:none}
+.nl-form input:focus{box-shadow:0 0 0 3px rgba(245,158,11,.5)}
+.nl-form button{background:var(--amber);color:var(--blue-900);font-weight:700;font-size:16px;padding:16px 32px;border-radius:var(--r);border:none;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;transition:background var(--t)}
+.nl-form button:hover{background:var(--amber-dark)}
+.nl-note{color:rgba(255,255,255,.55);font-size:13px;margin-top:16px}
+
+/* ── FOOTER ── */
+footer{background:var(--blue-900);color:rgba(255,255,255,.6);text-align:center;padding:32px 24px;font-size:13px}
+footer a{color:rgba(255,255,255,.5)}
+footer a:hover{color:#fff}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .cards-grid,.steps-grid{grid-template-columns:1fr 1fr}
+  .cat-grid,.cat-grid-row{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .cards-grid,.steps-grid,.cat-grid,.cat-grid-row{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .hero{padding:70px 20px}
+  section{padding-left:0;padding-right:0}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">kurs<span>-</span>erfahrungen.com</div>
+  <div class="nav-links">
+    <a href="#">Kurse</a>
+    <a href="#">Kategorien</a>
+    <a href="#">Testberichte</a>
+    <a href="#">Über uns</a>
+    <a href="#" class="nav-cta">Top-Kurse ansehen</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Die besten Online-Kurse<br>im <span>Test 2026</span></h1>
+    <p>Ehrliche Testberichte & unabhängige Vergleiche für Online-Kurse. Wir haben über 500 Kurse getestet – damit du den richtigen findest.</p>
+    <div class="hero-btns">
+      <a href="#kurse" class="btn-amber">Kurse entdecken →</a>
+      <a href="#berichte" class="btn-outline">Testberichte lesen</a>
+    </div>
+    <div class="hero-trust">
+      <span>Kostenlos &amp; unabhängig</span>
+      <span>Keine bezahlten Bewertungen</span>
+      <span>Seit 2019 aktiv</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="trust-num">500+</div>
+        <div class="trust-label">Kurse unabhängig getestet</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fas fa-users"></i></div>
+        <div class="trust-num">50.000+</div>
+        <div class="trust-label">Monatliche Leser</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="trust-num">7+ Jahre</div>
+        <div class="trust-label">Erfahrung &amp; Expertise</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon amber"><i class="fas fa-star"></i></div>
+        <div class="trust-num">4,8 / 5</div>
+        <div class="trust-label">Ø Leserbewertung</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOP KURSE -->
+<section class="section-gray" id="kurse">
+  <div class="container">
+    <div class="section-head">
+      <h2>Top Online-Kurse 2026 im Vergleich</h2>
+      <p>Unabhängig getestete Empfehlungen – ehrlich, transparent und aktuell.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="course-card">
+        <span class="course-badge">⭐ Platz 1</span>
+        <div class="course-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="course-title">Online Marketing Masterclass</div>
+        <div class="course-rating"><span class="stars">★★★★★</span> <strong>4,9</strong> / 5</div>
+        <p class="course-desc">Der umfassendste Kurs für digitales Marketing, SEO, Ads &amp; Social Media auf dem deutschen Markt.</p>
+        <div class="course-meta"><span>✓ 12 Module</span><span>✓ Zertifikat</span><span>✓ Lebenslang</span></div>
+        <a href="#" class="course-btn">Zum Testbericht →</a>
+      </div>
+      <div class="course-card featured">
+        <span class="course-badge gold">👑 Redaktions-Tipp</span>
+        <div class="course-icon"><i class="fas fa-code"></i></div>
+        <div class="course-title">Python für Einsteiger &amp; Profis</div>
+        <div class="course-rating"><span class="stars">★★★★★</span> <strong>4,8</strong> / 5</div>
+        <p class="course-desc">Von Null zum Python-Entwickler – Schritt für Schritt mit echten Projekten und persönlichem Support.</p>
+        <div class="course-meta"><span>✓ 20+ Stunden</span><span>✓ Community</span><span>✓ Lebenslang</span></div>
+        <a href="#" class="course-btn">Zum Testbericht →</a>
+      </div>
+      <div class="course-card">
+        <span class="course-badge">📈 Platz 3</span>
+        <div class="course-icon"><i class="fas fa-euro-sign"></i></div>
+        <div class="course-title">Business &amp; Investment Guide</div>
+        <div class="course-rating"><span class="stars">★★★★☆</span> <strong>4,7</strong> / 5</div>
+        <p class="course-desc">Finanzen, Investitionen und unternehmerisches Denken – praxisnah für den deutschsprachigen Markt.</p>
+        <div class="course-meta"><span>✓ 8 Module</span><span>✓ Zertifikat</span><span>✓ Q&amp;A Calls</span></div>
+        <a href="#" class="course-btn">Zum Testbericht →</a>
+      </div>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="btn-blue">Alle Kursvergleiche ansehen →</a>
+    </div>
+  </div>
+</section>
+
+<!-- KATEGORIEN -->
+<section class="section-white">
+  <div class="container">
+    <div class="section-head">
+      <h2>Kurse nach Kategorie durchsuchen</h2>
+      <p>Finde den perfekten Kurs in deinem Interessensgebiet.</p>
+    </div>
+    <div class="cat-grid">
+      <a href="#" class="cat-card">
+        <div class="cat-icon"><i class="fas fa-bullhorn"></i></div>
+        <div class="cat-info"><h4>Online Marketing</h4><p>SEO, Ads, Social Media &amp; mehr</p></div>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="cat-info"><h4>Programmierung</h4><p>Python, JavaScript, Web-Entwicklung</p></div>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-icon"><i class="fas fa-chart-bar"></i></div>
+        <div class="cat-info"><h4>Business &amp; Finanzen</h4><p>Investitionen, Unternehmensführung</p></div>
+      </a>
+    </div>
+    <div class="cat-grid-row">
+      <a href="#" class="cat-card">
+        <div class="cat-icon"><i class="fas fa-brain"></i></div>
+        <div class="cat-info"><h4>Persönlichkeit</h4><p>Mindset, Produktivität, Leadership</p></div>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-icon"><i class="fas fa-heartbeat"></i></div>
+        <div class="cat-info"><h4>Gesundheit &amp; Fitness</h4><p>Ernährung, Training, Wohlbefinden</p></div>
+      </a>
+      <a href="#" class="cat-card">
+        <div class="cat-icon"><i class="fas fa-palette"></i></div>
+        <div class="cat-info"><h4>Design &amp; Kreativität</h4><p>Grafik, Video, Fotografie &amp; mehr</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTBERICHTE -->
+<section class="section-gray" id="berichte">
+  <div class="container">
+    <div class="section-head">
+      <h2>Aktuelle Kurs-Testberichte</h2>
+      <p>Frische Testberichte direkt aus der Redaktion – regelmäßig aktualisiert.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="post-card">
+        <span class="post-cat">Online Marketing</span>
+        <div class="post-title">Digistore24 Kurs-Erfahrungen 2026 – Lohnt es sich?</div>
+        <p class="post-excerpt">Wir haben den meistverkauften Digistore24-Kurs getestet und berichten ehrlich über Qualität, Preis und Mehrwert.</p>
+        <div class="post-meta">
+          <span class="post-rating">★ 4,7</span>
+          <span class="post-date">Mai 2026</span>
+        </div>
+        <a href="#" class="post-link">Weiterlesen →</a>
+      </div>
+      <div class="post-card">
+        <span class="post-cat">Programmierung</span>
+        <div class="post-title">Udemy Python Kurs Test 2026 – Der vollständige Vergleich</div>
+        <p class="post-excerpt">Welcher Python-Kurs auf Udemy ist wirklich sein Geld wert? Unser ausführlicher Vergleich zeigt alle Details.</p>
+        <div class="post-meta">
+          <span class="post-rating">★ 4,8</span>
+          <span class="post-date">April 2026</span>
+        </div>
+        <a href="#" class="post-link">Weiterlesen →</a>
+      </div>
+      <div class="post-card">
+        <span class="post-cat">Business</span>
+        <div class="post-title">Copywriting Kurs Erfahrungen 2026 – Lohnt sich das?</div>
+        <p class="post-excerpt">Werbetexten lernen mit Online-Kursen: Wir haben die beliebtesten deutschen Copywriting-Kurse getestet.</p>
+        <div class="post-meta">
+          <span class="post-rating">★ 4,5</span>
+          <span class="post-date">April 2026</span>
+        </div>
+        <a href="#" class="post-link">Weiterlesen →</a>
+      </div>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="btn-blue">Alle Testberichte ansehen →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WIE WIR TESTEN -->
+<section class="section-white">
+  <div class="container">
+    <div class="section-head">
+      <h2>So testen wir Online-Kurse</h2>
+      <p>Unsere Methodik – transparent und nachvollziehbar. Kein Kurs wird ohne vollständige Prüfung empfohlen.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-ico"><i class="fas fa-play-circle"></i></div>
+        <div class="step-title">Kurs vollständig durcharbeiten</div>
+        <p class="step-desc">Wir absolvieren jeden Kurs komplett – kein Überspringen von Modulen.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-ico"><i class="fas fa-comments"></i></div>
+        <div class="step-title">Support &amp; Community testen</div>
+        <p class="step-desc">Wie gut hilft der Anbieter bei Fragen? Wir stellen echte Support-Anfragen.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-ico"><i class="fas fa-balance-scale"></i></div>
+        <div class="step-title">Preis-Leistung bewerten</div>
+        <p class="step-desc">Ist der Kurs seinen Preis wert? Wir vergleichen mit allen relevanten Alternativen.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-ico"><i class="fas fa-pen-alt"></i></div>
+        <div class="step-title">Ehrliches Fazit schreiben</div>
+        <p class="step-desc">Kein Schönreden: Wir nennen Vor- und Nachteile ohne Einschränkungen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-gray">
+  <div class="container">
+    <div class="section-head">
+      <h2>Häufig gestellte Fragen</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Wie findet ihr die besten Online-Kurse?
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-a">Unser Team absolviert jeden Kurs vollständig und bewertet ihn nach festen Kriterien: Inhalt & Qualität, Preis-Leistung, Support, Community und praktischer Nutzen. Wir kaufen alle Kurse selbst und erhalten keine kostenlosen Zugänge vom Anbieter.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Sind eure Bewertungen wirklich unabhängig?
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-a">Ja. Wir finanzieren uns über Affiliate-Links – das ändert aber nichts an unserer Bewertung. Wir empfehlen nur Kurse, die wir selbst für gut befunden haben. Negative Erfahrungen werden genauso veröffentlicht wie positive.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Wie verdient kurs-erfahrungen.com Geld?
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-a">Wir verdienen Geld durch Affiliate-Provisionen. Wenn du über einen unserer Links einen Kurs kaufst, erhalten wir eine kleine Provision – für dich ohne Mehrkosten. Diese Einnahmen ermöglichen es uns, die Webseite kostenlos und werbefrei zu betreiben.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Kann ich eigene Kurs-Erfahrungen einreichen?
+          <i class="fas fa-plus"></i>
+        </button>
+        <div class="faq-a">Ja, wir freuen uns über Lesererfahrungen! Schreib uns über unser Kontaktformular oder per E-Mail. Echte Nutzererfahrungen helfen anderen Lesern bei der Entscheidung. Wir prüfen alle Einsendungen und veröffentlichen authentische Bewertungen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container">
+    <h2>Keine Kurs-Empfehlung verpassen</h2>
+    <p>Trag dich in unseren Newsletter ein und erhalte die besten Kurs-Empfehlungen direkt in dein Postfach – kostenlos & jederzeit abbestellbar.</p>
+    <form class="nl-form" onsubmit="return false">
+      <input type="email" placeholder="Deine E-Mail-Adresse" required>
+      <button type="submit">Jetzt anmelden</button>
+    </form>
+    <p class="nl-note">🔒 Kein Spam. Datenschutz garantiert. Jederzeit abmeldbar.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 kurs-erfahrungen.com · <a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Affiliate-Offenlegung</a></p>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const answer=item.querySelector('.faq-a');
+  const isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(b=>{
+    b.classList.remove('open');
+    b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
+  });
+  if(!isOpen){btn.classList.add('open');answer.classList.add('open');}
+}
+</script>
+</body>
+</html>
