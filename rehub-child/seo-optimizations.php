@@ -1,220 +1,266 @@
 <?php
 /**
- * SEO-spezifische Optimierungen fuer kurs-erfahrungen.com
- * Kann in functions.php eingebunden werden via:
+ * SEO-Optimierungen fuer kurs-erfahrungen.com
+ * Marvin Seelhofer – Online-Marketing-Analyst
+ *
+ * Einbinden via functions.php:
  * require_once get_stylesheet_directory() . '/seo-optimizations.php';
  */
 
 // =====================================================
-// 1. META TAGS: Optimierte Meta-Beschreibung fuer Startseite
+// 1. META TAGS
 // =====================================================
 
 /**
  * Dynamische Meta-Description fuer die Startseite
- * (Nur verwenden wenn kein SEO-Plugin wie Yoast/RankMath aktiv ist)
+ * Nur aktiv wenn kein SEO-Plugin (Yoast / RankMath) installiert ist
  */
 function ke_custom_meta_description() {
-    if (is_front_page() && !defined('WPSEO_VERSION') && !class_exists('RankMath')) {
-        $month_year = date_i18n('F Y');
-        echo '<meta name="description" content="Die besten Online-Kurse im Test ' . esc_attr($month_year) . '. Ehrliche Erfahrungsberichte, Vergleiche und Bewertungen. Finde den perfekten Kurs fuer dich!">' . "\n";
+    if ( ! is_front_page() ) {
+        return;
     }
+    if ( defined('WPSEO_VERSION') || class_exists('RankMath') ) {
+        return;
+    }
+    $year = date('Y');
+    echo '<meta name="description" content="Marvin Seelhofer testet Online-Kurse & Coaching-Programme im deutschsprachigen Raum seit 2021. '
+        . '500+ ehrliche Erfahrungsberichte – unabhaengig, vollstaendig & ohne Gratiszugang. '
+        . 'Finde den richtigen Kurs ' . esc_attr($year) . '.">' . "\n";
 }
 add_action('wp_head', 'ke_custom_meta_description', 1);
 
 // =====================================================
-// 2. OPEN GRAPH: Social Media Optimierung
+// 2. OPEN GRAPH / TWITTER CARD
 // =====================================================
 
-/**
- * Open Graph Tags fuer besseres Social Sharing
- * (Nur verwenden wenn kein SEO-Plugin aktiv ist)
- */
 function ke_open_graph_tags() {
-    if (!is_front_page()) {
+    if ( ! is_front_page() ) {
+        return;
+    }
+    if ( defined('WPSEO_VERSION') || class_exists('RankMath') ) {
         return;
     }
 
-    if (defined('WPSEO_VERSION') || class_exists('RankMath')) {
-        return;
-    }
-
-    $site_name = get_bloginfo('name');
-    $description = 'Die besten Online-Kurse im Test. Ehrliche Erfahrungsberichte und Vergleiche.';
-    $logo_url = get_site_icon_url(1200);
+    $site_name   = 'Kurs Erfahrungen';
+    $title       = 'Ehrliche Online-Kurs Testberichte & Erfahrungen ' . date('Y');
+    $description = 'Marvin Seelhofer testet Online-Kurse, Coachings & digitale Produkte im deutschsprachigen Raum – mit eigenem Geld, vollstaendig und unabhaengig. 500+ Berichte seit 2021.';
+    $url         = home_url('/');
+    $image       = get_site_icon_url(1200);
     ?>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="<?php echo esc_attr($site_name); ?> - Online-Kurs Erfahrungen & Tests">
+    <meta property="og:type"        content="website">
+    <meta property="og:locale"      content="de_DE">
+    <meta property="og:site_name"   content="<?php echo esc_attr($site_name); ?>">
+    <meta property="og:title"       content="<?php echo esc_attr($title); ?>">
     <meta property="og:description" content="<?php echo esc_attr($description); ?>">
-    <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
-    <meta property="og:site_name" content="<?php echo esc_attr($site_name); ?>">
-    <?php if ($logo_url) : ?>
-    <meta property="og:image" content="<?php echo esc_url($logo_url); ?>">
+    <meta property="og:url"         content="<?php echo esc_url($url); ?>">
+    <?php if ($image) : ?>
+    <meta property="og:image"       content="<?php echo esc_url($image); ?>">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
     <?php endif; ?>
-    <meta property="og:locale" content="de_DE">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo esc_attr($site_name); ?>">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="<?php echo esc_attr($title); ?>">
     <meta name="twitter:description" content="<?php echo esc_attr($description); ?>">
+    <?php if ($image) : ?>
+    <meta name="twitter:image"       content="<?php echo esc_url($image); ?>">
+    <?php endif; ?>
     <?php
 }
 add_action('wp_head', 'ke_open_graph_tags', 2);
 
 // =====================================================
-// 3. INTERNAL LINKING: Automatische interne Verlinkung
+// 3. FAQ SCHEMA (Shortcode [ke_faq_schema])
 // =====================================================
 
 /**
- * Breadcrumb Schema fuer die Startseite
+ * FAQPage Schema – passend zu den echten FAQs auf kurs-erfahrungen.com
+ * Nutzung: Shortcode [ke_faq_schema] in einem Elementor-HTML-Widget
  */
-function ke_homepage_breadcrumb_schema() {
-    if (!is_front_page()) {
-        return;
-    }
-
-    $schema = [
-        '@context' => 'https://schema.org',
-        '@type' => 'BreadcrumbList',
-        'itemListElement' => [
-            [
-                '@type' => 'ListItem',
-                'position' => 1,
-                'name' => 'Startseite',
-                'item' => home_url('/'),
-            ],
-        ],
-    ];
-
-    echo '<script type="application/ld+json">' . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>' . "\n";
-}
-add_action('wp_head', 'ke_homepage_breadcrumb_schema', 3);
-
-// =====================================================
-// 4. FAQ SCHEMA: Automatisches FAQ Schema
-// =====================================================
-
-/**
- * FAQ Schema Markup per Shortcode einfuegen
- * Nutzung: [ke_faq_schema] in Elementor Text Widget
- *
- * FAQ Eintraege werden in der functions.php definiert
- */
-function ke_faq_schema_shortcode($atts) {
+function ke_faq_schema_shortcode() {
     $faqs = [
         [
-            'question' => 'Wie werden die Online-Kurse getestet?',
-            'answer' => 'Wir testen jeden Kurs persoenlich, bewerten Inhalt, Qualitaet, Support und Preis-Leistungs-Verhaeltnis nach einem standardisierten Bewertungsschema.',
-        ],
-        [
-            'question' => 'Sind die Erfahrungsberichte echt?',
-            'answer' => 'Ja, alle Erfahrungsberichte basieren auf echten Tests. Wir kaufen und durcharbeiten jeden Kurs selbst bevor wir eine Bewertung abgeben.',
+            'question' => 'Kaufst du die Kurse wirklich selbst?',
+            'answer'   => 'Ja – jeder Kurs auf kurs-erfahrungen.com wurde von Marvin Seelhofer persoenlich mit eigenem Geld gekauft. Es wird kein kostenloser Zugang vom Anbieter akzeptiert und kein Vertrag mit Anbietern eingegangen. Nur so sind die Bewertungen 100 % unabhaengig.',
         ],
         [
             'question' => 'Wie verdient kurs-erfahrungen.com Geld?',
-            'answer' => 'Wir finanzieren uns ueber Affiliate-Links. Wenn du ueber unsere Links einen Kurs kaufst, erhalten wir eine Provision. Der Preis bleibt fuer dich gleich.',
+            'answer'   => 'Die Seite finanziert sich ueber Affiliate-Links. Wenn du ueber einen Link einen Kurs kaufst, erhaelt Marvin eine Provision – fuer dich ohne Mehrkosten. Die Bewertungen werden davon nicht beeinflusst. Negative Erfahrungen werden genauso veroeffentlicht wie positive.',
         ],
         [
-            'question' => 'Welche Online-Kurs Plattformen werden getestet?',
-            'answer' => 'Wir testen Kurse von allen gaengigen Plattformen wie Udemy, Digistore24, Copecart, elopage und auch selbst-gehostete Kurse von einzelnen Anbietern.',
+            'question' => 'Was passiert, wenn ein Kurs schlecht ist?',
+            'answer'   => 'Dann erscheint ein ehrlicher negativer Testbericht. Es werden keine Ausnahmen gemacht, auch wenn ein Anbieter hoehere Provision zahlt. Schlechte Kurse werden klar als solche gekennzeichnet – zum Schutz der Leser.',
+        ],
+        [
+            'question' => 'Welche Kursplattformen werden getestet?',
+            'answer'   => 'Es werden Produkte von allen gaengigen deutschsprachigen Plattformen getestet: Digistore24, Copecart, elopage, CopeCart sowie selbst-gehostete Kurse einzelner Anbieter. Der Schwerpunkt liegt auf dem deutschsprachigen Markt.',
+        ],
+        [
+            'question' => 'Kann ich einen Kurs zur Bewertung vorschlagen?',
+            'answer'   => 'Ja, Vorschlaege sind willkommen. Einfach ueber das Kontaktformular auf kurs-erfahrungen.com/kontakt/ einreichen. Kein kostenloser Zugang, keine Provision fuer positive Bewertungen.',
         ],
     ];
 
     $schema = [
-        '@context' => 'https://schema.org',
-        '@type' => 'FAQPage',
+        '@context'   => 'https://schema.org',
+        '@type'      => 'FAQPage',
         'mainEntity' => [],
     ];
 
-    $html = '<div class="ke-faq-section">';
-
+    ob_start();
+    echo '<div class="ke-faq-schema-block">';
     foreach ($faqs as $faq) {
         $schema['mainEntity'][] = [
             '@type' => 'Question',
-            'name' => $faq['question'],
+            'name'  => $faq['question'],
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => $faq['answer'],
+                'text'  => $faq['answer'],
             ],
         ];
-
-        $html .= '<div class="ke-faq-item">';
-        $html .= '<h3 class="ke-faq-question">' . esc_html($faq['question']) . '</h3>';
-        $html .= '<div class="ke-faq-answer"><p>' . esc_html($faq['answer']) . '</p></div>';
-        $html .= '</div>';
     }
+    echo '</div>';
+    echo '<script type="application/ld+json">'
+        . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
+        . '</script>';
 
-    $html .= '</div>';
-    $html .= '<script type="application/ld+json">' . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>';
-
-    return $html;
+    return ob_get_clean();
 }
 add_shortcode('ke_faq_schema', 'ke_faq_schema_shortcode');
 
 // =====================================================
-// 5. PERFORMANCE MONITORING: Core Web Vitals Tracking
+// 4. BREADCRUMB SCHEMA
 // =====================================================
 
-/**
- * Web Vitals Tracking im Frontend (nur fuer Admins)
- * Zeigt LCP, FID/INP, CLS Werte in der Browser-Konsole
- */
-function ke_web_vitals_debug() {
-    if (!is_user_logged_in() || !current_user_can('manage_options')) {
+function ke_homepage_breadcrumb_schema() {
+    if ( ! is_front_page() ) {
         return;
     }
 
-    if (!is_front_page()) {
+    $schema = [
+        '@context' => 'https://schema.org',
+        '@type'    => 'BreadcrumbList',
+        'itemListElement' => [
+            [
+                '@type'    => 'ListItem',
+                'position' => 1,
+                'name'     => 'Startseite',
+                'item'     => home_url('/'),
+            ],
+        ],
+    ];
+
+    echo '<script type="application/ld+json">'
+        . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
+        . '</script>' . "\n";
+}
+add_action('wp_head', 'ke_homepage_breadcrumb_schema', 3);
+
+// =====================================================
+// 5. WOOCOMMERCE PRODUKT-SCHEMA (Einzelseite)
+// =====================================================
+
+/**
+ * AggregateRating Schema fuer WooCommerce Produktseiten (Experten-Seiten)
+ * Wird zusaetzlich zum Review-Schema in functions.php ausgegeben
+ */
+function ke_product_aggregate_rating_schema() {
+    if ( ! is_singular('product') ) {
+        return;
+    }
+
+    global $post;
+    $product = wc_get_product($post->ID);
+    if ( ! $product ) {
+        return;
+    }
+
+    $rating       = (float) $product->get_average_rating();
+    $review_count = (int)   $product->get_review_count();
+
+    if ( $rating <= 0 || $review_count <= 0 ) {
+        return;
+    }
+
+    $categories = wp_get_post_terms($post->ID, 'product_cat', ['fields' => 'names']);
+
+    $schema = [
+        '@context' => 'https://schema.org',
+        '@type'    => 'Product',
+        'name'     => get_the_title(),
+        'url'      => get_permalink(),
+        'aggregateRating' => [
+            '@type'       => 'AggregateRating',
+            'ratingValue' => number_format($rating, 1),
+            'reviewCount' => $review_count,
+            'bestRating'  => '5',
+            'worstRating' => '1',
+        ],
+    ];
+
+    $image = get_the_post_thumbnail_url($post->ID, 'large');
+    if ($image) {
+        $schema['image'] = $image;
+    }
+
+    if (!empty($categories)) {
+        $schema['category'] = implode(', ', $categories);
+    }
+
+    echo '<script type="application/ld+json">'
+        . wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
+        . '</script>' . "\n";
+}
+add_action('wp_head', 'ke_product_aggregate_rating_schema');
+
+// =====================================================
+// 6. SITEMAP-PRIORITAETEN
+// =====================================================
+
+function ke_sitemap_entry($entry, $post_type, $post) {
+    if ($post->ID === (int) get_option('page_on_front')) {
+        $entry['changefreq'] = 'daily';
+        $entry['priority']   = '1.0';
+    }
+    return $entry;
+}
+add_filter('wpseo_sitemap_entry', 'ke_sitemap_entry', 10, 3);
+
+// =====================================================
+// 7. CORE WEB VITALS DEBUG (nur fuer eingeloggte Admins)
+// =====================================================
+
+function ke_web_vitals_debug() {
+    if ( ! is_user_logged_in() || ! current_user_can('manage_options') ) {
+        return;
+    }
+    if ( ! is_front_page() && ! is_singular('product') ) {
         return;
     }
     ?>
     <script type="module">
-    // Web Vitals Debug fuer Administratoren
     if (window.PerformanceObserver) {
-        // LCP Tracking
-        new PerformanceObserver((entryList) => {
-            const entries = entryList.getEntries();
-            const lastEntry = entries[entries.length - 1];
-            console.log('%c[KE] LCP: ' + Math.round(lastEntry.startTime) + 'ms', 'color: #4CAF50; font-weight: bold');
-            if (lastEntry.element) {
-                console.log('[KE] LCP Element:', lastEntry.element);
-            }
-        }).observe({type: 'largest-contentful-paint', buffered: true});
+        new PerformanceObserver(list => {
+            const e = list.getEntries().at(-1);
+            console.log('%c[KE] LCP: ' + Math.round(e.startTime) + 'ms', 'color:#22c55e;font-weight:700');
+        }).observe({type:'largest-contentful-paint', buffered:true});
 
-        // CLS Tracking
-        let clsValue = 0;
-        new PerformanceObserver((entryList) => {
-            for (const entry of entryList.getEntries()) {
-                if (!entry.hadRecentInput) {
-                    clsValue += entry.value;
+        let cls = 0;
+        new PerformanceObserver(list => {
+            for (const e of list.getEntries()) {
+                if (!e.hadRecentInput) cls += e.value;
+            }
+            console.log('%c[KE] CLS: ' + cls.toFixed(4), 'color:#f59e0b;font-weight:700');
+        }).observe({type:'layout-shift', buffered:true});
+
+        new PerformanceObserver(list => {
+            for (const e of list.getEntries()) {
+                if (e.duration > 100) {
+                    console.log('%c[KE] INP: ' + e.name + ' – ' + Math.round(e.duration) + 'ms', 'color:#ef4444;font-weight:700');
                 }
             }
-            console.log('%c[KE] CLS: ' + clsValue.toFixed(4), 'color: #FF9800; font-weight: bold');
-        }).observe({type: 'layout-shift', buffered: true});
-
-        // INP Tracking (Interaction to Next Paint)
-        new PerformanceObserver((entryList) => {
-            for (const entry of entryList.getEntries()) {
-                console.log('%c[KE] Interaction: ' + entry.name + ' - ' + Math.round(entry.duration) + 'ms', 'color: #2196F3; font-weight: bold');
-            }
-        }).observe({type: 'event', buffered: true, durationThreshold: 16});
+        }).observe({type:'event', buffered:true, durationThreshold:16});
     }
     </script>
     <?php
 }
 add_action('wp_footer', 'ke_web_vitals_debug', 999);
-
-// =====================================================
-// 6. SITEMAP: Startseite Prioritaet erhoehen
-// =====================================================
-
-/**
- * Sitemap Prioritaeten anpassen (fuer WordPress Core Sitemap)
- */
-function ke_sitemap_entry($entry, $post_type, $post) {
-    if ($post->ID === (int) get_option('page_on_front')) {
-        $entry['changefreq'] = 'daily';
-        $entry['priority'] = '1.0';
-    }
-    return $entry;
-}
-
-// Fuer Yoast SEO
-add_filter('wpseo_sitemap_entry', 'ke_sitemap_entry', 10, 3);

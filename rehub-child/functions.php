@@ -375,3 +375,207 @@ function ke_disable_self_pingbacks(&$links) {
     }
 }
 add_action('pre_ping', 'ke_disable_self_pingbacks');
+
+// =====================================================
+// 9. WOOCOMMERCE: Review-Site Optimierungen
+// =====================================================
+
+/**
+ * "In den Warenkorb" → "Zum Testbericht lesen"
+ * Erfahrungsberichte sind keine Kaufprodukte
+ */
+function ke_wc_loop_button_text() {
+    return 'Zum Testbericht lesen &#8594;';
+}
+add_filter('woocommerce_product_add_to_cart_text', 'ke_wc_loop_button_text');
+add_filter('woocommerce_product_single_add_to_cart_text', 'ke_wc_loop_button_text');
+
+/**
+ * Cart-Fragments AJAX-Call deaktivieren
+ * Spart ~1 unnötigen HTTP-Request pro Seitenaufruf
+ */
+function ke_remove_wc_cart_fragments() {
+    if ( ! is_cart() && ! is_checkout() ) {
+        wp_dequeue_script('wc-cart-fragments');
+    }
+}
+add_action('wp_enqueue_scripts', 'ke_remove_wc_cart_fragments', 11);
+
+/**
+ * WooCommerce Produkt-Tabs umbenennen
+ * "Beschreibung" → "Testbericht", "Bewertungen" → "Lesererfahrungen"
+ */
+function ke_rename_wc_product_tabs($tabs) {
+    if (isset($tabs['description'])) {
+        $tabs['description']['title'] = 'Testbericht';
+    }
+    if (isset($tabs['reviews'])) {
+        $tabs['reviews']['title'] = 'Lesererfahrungen (%d)';
+    }
+    return $tabs;
+}
+add_filter('woocommerce_product_tabs', 'ke_rename_wc_product_tabs', 98);
+
+/**
+ * Kurzbeschreibung im Produkt-Loop anzeigen (unter dem Titel)
+ * Erscheint in den Homepage-Shortcodes [products ...]
+ */
+function ke_product_loop_short_description() {
+    global $product;
+    if ( ! $product ) {
+        return;
+    }
+    $excerpt = $product->get_short_description();
+    if ( $excerpt ) {
+        echo '<p class="ke-loop-excerpt">' . wp_trim_words( wp_strip_all_tags( $excerpt ), 18, '&hellip;' ) . '</p>';
+    }
+}
+add_action('woocommerce_after_shop_loop_item_title', 'ke_product_loop_short_description', 15);
+
+/**
+ * Review Schema (schema.org/Review) auf WooCommerce Produktseiten
+ * Ermöglicht Google Rich Snippets mit Sternebewertung
+ */
+function ke_product_review_schema() {
+    if ( ! is_singular('product') ) {
+        return;
+    }
+
+    global $post;
+    $product = wc_get_product( $post->ID );
+    if ( ! $product ) {
+        return;
+    }
+
+    $rating       = (float) $product->get_average_rating();
+    $review_count = (int)   $product->get_review_count();
+    $title        = get_the_title();
+    $excerpt      = wp_strip_all_tags( $product->get_short_description() );
+    $url          = get_permalink();
+    $image        = get_the_post_thumbnail_url( $post->ID, 'large' );
+
+    $schema = [
+        '@context'      => 'https://schema.org',
+        '@type'         => 'Review',
+        'name'          => $title . ' Erfahrungen & Test ' . date('Y'),
+        'description'   => $excerpt ?: 'Erfahrungsbericht und Test von Marvin Seelhöfer.',
+        'url'           => $url,
+        'datePublished' => get_the_date('c'),
+        'dateModified'  => get_the_modified_date('c'),
+        'author'        => [
+            '@type' => 'Person',
+            'name'  => 'Marvin Seelhöfer',
+            'url'   => home_url('/author/kurs-erfahrungen/'),
+        ],
+        'publisher' => [
+            '@type' => 'Organization',
+            'name'  => 'Kurs Erfahrungen',
+            'url'   => home_url('/'),
+        ],
+        'itemReviewed' => [
+            '@type'       => 'Product',
+            'name'        => $title,
+            'description' => $excerpt,
+        ],
+    ];
+
+    if ( $rating > 0 ) {
+        $schema['reviewRating'] = [
+            '@type'       => 'Rating',
+            'ratingValue' => number_format( $rating, 1 ),
+            'bestRating'  => '5',
+            'worstRating' => '1',
+        ];
+        if ( $review_count > 0 ) {
+            $schema['itemReviewed']['aggregateRating'] = [
+                '@type'       => 'AggregateRating',
+                'ratingValue' => number_format( $rating, 1 ),
+                'reviewCount' => $review_count,
+                'bestRating'  => '5',
+                'worstRating' => '1',
+            ];
+        }
+    }
+
+    if ( $image ) {
+        $schema['image'] = $image;
+    }
+
+    echo '<script type="application/ld+json">'
+        . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
+        . '</script>' . "\n";
+}
+add_action('wp_head', 'ke_product_review_schema');
+
+/**
+ * Person-Schema für Marvin Seelhöfer (Startseite & Autor-Archiv)
+ */
+function ke_author_person_schema() {
+    if ( ! is_front_page() && ! is_author() ) {
+        return;
+    }
+
+    $schema = [
+        '@context'    => 'https://schema.org',
+        '@type'       => 'Person',
+        'name'        => 'Marvin Seelhöfer',
+        'url'         => home_url('/author/kurs-erfahrungen/'),
+        'jobTitle'    => 'Online-Marketing-Analyst',
+        'description' => 'Marvin Seelhöfer analysiert seit 2021 Online-Kurse, Coaching-Programme und digitale Produkte im deutschsprachigen Raum. Über 500 Produkte getestet – mit eigenem Geld, vollständig und unabhängig.',
+        'sameAs'      => [
+            'https://www.youtube.com/c/KursErfahrungen',
+            'https://www.provenexpert.com/de-de/kurs-erfahrungen-com/',
+        ],
+        'worksFor' => [
+            '@type' => 'Organization',
+            'name'  => 'Kurs Erfahrungen',
+            'url'   => home_url('/'),
+        ],
+        'knowsAbout' => [
+            'Online-Marketing',
+            'Affiliate-Marketing',
+            'Online-Kurse',
+            'Coaching-Programme',
+            'Digitale Geschäftsmodelle',
+        ],
+    ];
+
+    echo '<script type="application/ld+json">'
+        . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
+        . '</script>' . "\n";
+}
+add_action('wp_head', 'ke_author_person_schema');
+
+/**
+ * WooCommerce: Unnötige Skripte auf Nicht-Shop-Seiten entfernen
+ */
+function ke_remove_wc_scripts_on_non_shop_pages() {
+    if ( is_shop() || is_product() || is_product_category() || is_cart() || is_checkout() || is_account_page() ) {
+        return;
+    }
+    wp_dequeue_style('woocommerce-general');
+    wp_dequeue_style('woocommerce-layout');
+    wp_dequeue_style('woocommerce-smallscreen');
+}
+// Kommentar: Deaktiviert lassen bis getestet – Rehub überschreibt WC-Styles evtl. global
+// add_action('wp_enqueue_scripts', 'ke_remove_wc_scripts_on_non_shop_pages', 99);
+
+/**
+ * WooCommerce: CSS-Klasse "ke-products-wrap" per Filter an Shortcode-Output hängen
+ * Sorgt dafür dass das Homepage-CSS greift
+ */
+function ke_wc_products_shortcode_wrapper($output, $atts) {
+    return '<div class="ke-products-wrap">' . $output . '</div>';
+}
+add_filter('woocommerce_shortcode_products_query_results', function($results) {
+    return $results; // Daten unverändert – Wrapper kommt per CSS-Klasse im Template
+});
+
+/**
+ * WooCommerce: "Weitere Informationen"-Tab entfernen (bei Reviews nicht nötig)
+ */
+function ke_remove_wc_additional_info_tab($tabs) {
+    unset($tabs['additional_information']);
+    return $tabs;
+}
+add_filter('woocommerce_product_tabs', 'ke_remove_wc_additional_info_tab', 99);

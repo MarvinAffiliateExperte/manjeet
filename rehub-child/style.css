@@ -1,159 +1,610 @@
 /*
- Theme Name:   Flavor flavor Child (KE Optimiert)
+ Theme Name:   Rehub Child
  Theme URI:    https://kurs-erfahrungen.com
- Description:  Optimiertes Child Theme fuer kurs-erfahrungen.com mit Performance & SEO Verbesserungen
+ Description:  Professionelles Child Theme Redesign 2026 fuer kurs-erfahrungen.com
  Author:       Kurs Erfahrungen
  Author URI:   https://kurs-erfahrungen.com
- Template:     flavor flavor
- Version:      2.0.0
- Text Domain:  flavor flavor-child
+ Template:     rehub
+ Version:      3.0.0
+ Text Domain:  rehub-child
 */
 
-/* ===========================================
-   CRITICAL CSS - Above the Fold Styles
-   Diese Styles werden sofort geladen fuer
-   schnelleres erstes Rendering (FCP/LCP)
-   =========================================== */
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+:root {
+  --ke-blue-900:  #0f172a;
+  --ke-blue-800:  #1e3a8a;
+  --ke-blue-600:  #1e40af;
+  --ke-blue-500:  #2563eb;
+  --ke-blue-50:   #eff6ff;
+  --ke-amber:     #f59e0b;
+  --ke-amber-dark:#d97706;
+  --ke-dark:      #1e293b;
+  --ke-gray-700:  #334155;
+  --ke-gray-500:  #64748b;
+  --ke-gray-200:  #e2e8f0;
+  --ke-gray-100:  #f1f5f9;
+  --ke-white:     #ffffff;
+  --ke-radius-sm: 6px;
+  --ke-radius:    10px;
+  --ke-radius-lg: 16px;
+  --ke-shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+  --ke-shadow:    0 4px 16px rgba(0,0,0,.10), 0 1px 4px rgba(0,0,0,.06);
+  --ke-shadow-lg: 0 10px 40px rgba(0,0,0,.14), 0 2px 8px rgba(0,0,0,.07);
+  --ke-transition: 0.22s ease;
+}
 
-/* ---- Layout Stabilisierung (CLS Prevention) ---- */
+/* =========================================================
+   GLOBAL BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--ke-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Feste Hoehe fuer Header um Layout-Sprung zu vermeiden */
-.flavor flavor-header-wrap,
-#flavor flavor-header {
-    min-height: 60px;
-    contain: layout style;
+img { height: auto; max-width: 100%; }
+
+a { color: var(--ke-blue-600); }
+a:hover { color: var(--ke-blue-500); }
+
+/* =========================================================
+   CLS PREVENTION
+   ========================================================= */
+.elementor-widget-image img,
+.post-thumbnail img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
-/* ---- Hero Section Optimierung ---- */
-.elementor-section.elementor-section-height-full:first-child,
-.homepage-hero-section {
-    contain: layout paint;
-    content-visibility: auto;
-    contain-intrinsic-size: 0 600px;
+#site-header,
+.rh-header-wrap,
+header.header {
+  min-height: 60px;
+  contain: layout style;
 }
 
-/* ---- Typografie Optimierung ---- */
-/* Font-Display Swap erzwingen fuer alle Custom Fonts */
-@font-face {
-    font-display: swap !important;
+.elementor-section:nth-child(n+4) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
 }
 
-/* ---- Affiliate Box Optimierung ---- */
-.flavor flavor_woo_review,
-.wpsm_box.flavor flavor_review_box,
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+.ke-btn-primary {
+  transition: background var(--ke-transition), transform var(--ke-transition), box-shadow var(--ke-transition) !important;
+}
+.ke-btn-primary:hover {
+  background: var(--ke-amber-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(245,158,11,0.35) !important;
+}
+.ke-btn-outline {
+  transition: background var(--ke-transition), border-color var(--ke-transition) !important;
+}
+.ke-btn-outline:hover {
+  background: rgba(255,255,255,0.12) !important;
+  border-color: rgba(255,255,255,0.9) !important;
+}
+
+/* =========================================================
+   COURSE CARDS
+   ========================================================= */
+.ke-course-card {
+  background: var(--ke-white);
+  border-radius: var(--ke-radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--ke-shadow);
+  border: 1px solid var(--ke-gray-200);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition);
+  position: relative;
+}
+.ke-course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ke-shadow-lg);
+}
+.ke-course-card--featured {
+  border-color: var(--ke-blue-600);
+  box-shadow: 0 4px 20px rgba(30,64,175,0.15);
+}
+.ke-course-badge {
+  display: inline-block;
+  background: var(--ke-blue-50);
+  color: var(--ke-blue-600);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 4px 12px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+.ke-course-badge--gold {
+  background: #fffbeb;
+  color: var(--ke-amber-dark);
+}
+.ke-course-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ke-dark);
+  margin: 0;
+  line-height: 1.3;
+}
+.ke-course-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: var(--ke-gray-700);
+}
+.ke-stars { color: var(--ke-amber); letter-spacing: -1px; }
+.ke-course-desc {
+  color: var(--ke-gray-500);
+  font-size: 15px;
+  margin: 0;
+  flex: 1;
+}
+.ke-course-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ke-course-meta span {
+  font-size: 13px;
+  color: var(--ke-gray-500);
+  font-weight: 500;
+}
+.ke-course-btn {
+  display: block;
+  text-align: center;
+  background: var(--ke-blue-600);
+  color: var(--ke-white) !important;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 24px;
+  border-radius: var(--ke-radius);
+  text-decoration: none !important;
+  transition: background var(--ke-transition), transform var(--ke-transition);
+  margin-top: 4px;
+}
+.ke-course-btn:hover {
+  background: var(--ke-blue-500) !important;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CATEGORY CARDS
+   ========================================================= */
+.ke-cat-card.elementor-widget-icon-box {
+  background: var(--ke-white);
+  border: 1px solid var(--ke-gray-200);
+  border-radius: var(--ke-radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--ke-shadow-sm);
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition), border-color var(--ke-transition);
+}
+.ke-cat-card.elementor-widget-icon-box:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ke-shadow);
+  border-color: var(--ke-blue-600);
+}
+.ke-cat-card .elementor-icon-box-title a {
+  color: var(--ke-dark) !important;
+  text-decoration: none !important;
+}
+
+/* =========================================================
+   BLOG POST CARDS
+   ========================================================= */
+.ke-post-card {
+  background: var(--ke-white);
+  border-radius: var(--ke-radius-lg);
+  padding: 30px 26px;
+  box-shadow: var(--ke-shadow);
+  border: 1px solid var(--ke-gray-200);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition);
+}
+.ke-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ke-shadow-lg);
+}
+.ke-post-category {
+  display: inline-block;
+  background: var(--ke-blue-50);
+  color: var(--ke-blue-600);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  width: fit-content;
+}
+.ke-post-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ke-dark);
+  margin: 0;
+  line-height: 1.4;
+  flex: 1;
+}
+.ke-post-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.ke-post-title a:hover { color: var(--ke-blue-600) !important; }
+.ke-post-excerpt {
+  color: var(--ke-gray-500);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+}
+.ke-post-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 13px;
+}
+.ke-post-rating { color: var(--ke-amber-dark); font-weight: 700; }
+.ke-post-date   { color: var(--ke-gray-500); }
+.ke-post-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ke-blue-600) !important;
+  text-decoration: none !important;
+  transition: color var(--ke-transition);
+}
+.ke-post-link:hover { color: var(--ke-blue-500) !important; }
+
+/* =========================================================
+   HOW WE TEST – STEP CARDS
+   ========================================================= */
+.ke-step-card {
+  text-align: center;
+  padding: 36px 24px;
+  background: var(--ke-white);
+  border-radius: var(--ke-radius-lg);
+  border: 1px solid var(--ke-gray-200);
+  box-shadow: var(--ke-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition);
+}
+.ke-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ke-shadow);
+}
+.ke-step-number {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ke-blue-600);
+  letter-spacing: 0.1em;
+  background: var(--ke-blue-50);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ke-step-icon, .ke-step-icon i {
+  font-size: 32px;
+  color: var(--ke-blue-600);
+  line-height: 1;
+}
+.ke-step-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ke-dark);
+  margin: 0;
+  line-height: 1.35;
+}
+.ke-step-desc {
+  font-size: 14px;
+  color: var(--ke-gray-500);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   NEWSLETTER FORM
+   ========================================================= */
+.ke-newsletter-form input[type="email"]:focus {
+  box-shadow: 0 0 0 3px rgba(245,158,11,0.4);
+  outline: none;
+}
+.ke-newsletter-form button:hover {
+  background: var(--ke-amber-dark) !important;
+  cursor: pointer;
+}
+
+/* =========================================================
+   ELEMENTOR ACCORDION / FAQ
+   ========================================================= */
+.elementor-accordion .elementor-accordion-item {
+  border: 1px solid var(--ke-gray-200) !important;
+  border-radius: var(--ke-radius) !important;
+  margin-bottom: 10px !important;
+  overflow: hidden;
+  background: var(--ke-white);
+}
+.elementor-accordion .elementor-tab-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--ke-dark) !important;
+  padding: 20px 24px !important;
+  background: var(--ke-white) !important;
+}
+.elementor-accordion .elementor-tab-title.elementor-active {
+  color: var(--ke-blue-600) !important;
+  background: var(--ke-blue-50) !important;
+}
+.elementor-accordion .elementor-tab-content {
+  padding: 20px 24px !important;
+  color: var(--ke-gray-700) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  border-top: 1px solid var(--ke-gray-200) !important;
+}
+
+/* =========================================================
+   ICON BOXES (Trust Bar)
+   ========================================================= */
+.elementor-widget-icon-box .elementor-icon-box-title {
+  margin-bottom: 4px !important;
+}
+.elementor-icon-box-icon .elementor-icon {
+  transition: transform var(--ke-transition);
+}
+.elementor-widget-icon-box:hover .elementor-icon-box-icon .elementor-icon {
+  transform: scale(1.1);
+}
+
+/* =========================================================
+   ELEMENTOR BUTTONS
+   ========================================================= */
+.elementor-button {
+  border-radius: var(--ke-radius) !important;
+  font-weight: 700 !important;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition) !important;
+}
+.elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--ke-shadow) !important;
+}
+
+/* =========================================================
+   REHUB AFFILIATE BOX IMPROVEMENTS
+   ========================================================= */
+.rh_product_wrap,
+.compare_box,
+.offer_block,
 .rh-cartbox {
-    contain: layout style;
-    border-radius: 12px;
-    transition: box-shadow 0.2s ease;
+  border-radius: var(--ke-radius) !important;
+  overflow: hidden;
+  transition: box-shadow var(--ke-transition) !important;
 }
-
-.flavor flavor_woo_review:hover,
 .rh-cartbox:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10) !important;
+}
+.rh_product__title a {
+  font-weight: 700 !important;
+  color: var(--ke-dark) !important;
+}
+.rh_product__title a:hover { color: var(--ke-blue-600) !important; }
+.offer_button a,
+.rh_button,
+.rh-btn {
+  border-radius: var(--ke-radius) !important;
+  font-weight: 700 !important;
+  min-height: 44px;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition) !important;
+}
+.offer_button a:hover,
+.rh_button:hover,
+.rh-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--ke-shadow) !important;
 }
 
-/* ---- Button Optimierung (CTA) ---- */
-.flavor flavor_btn,
-.rh-btn,
-.elementor-button,
-.wpsm_button {
-    border-radius: 8px;
-    font-weight: 600;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    will-change: transform;
-}
-
-.flavor flavor_btn:hover,
-.rh-btn:hover,
-.wpsm_button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* ---- Vergleichstabellen Modernisierung ---- */
-.flavor flavor_woo_review table,
-.wpsm-comptable,
-.flavor flavor_score_box_item {
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* ---- Bewertungssterne Optimierung ---- */
-.flavor flavor-star-rating,
-.flavor flavor_score_box {
-    contain: layout style paint;
-}
-
-/* ---- Content Visibility fuer Below-the-fold Sektionen ---- */
-.elementor-section:nth-child(n+3) {
-    content-visibility: auto;
-    contain-intrinsic-size: 0 500px;
-}
-
-/* ---- Responsive Optimierungen ---- */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 @media (max-width: 767px) {
-    /* Mobile: Groessere Touch-Targets (min. 44x44px fuer Google) */
-    .flavor flavor_btn,
-    .rh-btn,
-    .elementor-button,
-    a.wpsm_button {
-        min-height: 44px;
-        min-width: 44px;
-        padding: 12px 24px;
-    }
-
-    /* Mobile: Kompaktere Affiliate Boxen */
-    .flavor flavor_woo_review {
-        padding: 15px;
-    }
-
-    /* Mobile: Bessere Lesbarkeit */
-    .flavor flavor-main-font,
-    .entry-content {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-    /* Mobile: Tabellen horizontal scrollbar */
-    .wpsm-comptable {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* Mobile: Sticky CTA Button */
-    .mobile-sticky-cta {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        padding: 10px 15px;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    }
+  .ke-course-card,
+  .ke-post-card,
+  .ke-step-card {
+    margin-bottom: 20px;
+    padding: 24px 20px;
+  }
+  .ke-newsletter-form form {
+    flex-direction: column !important;
+  }
+  .ke-newsletter-form input[type="email"],
+  .ke-newsletter-form button {
+    width: 100% !important;
+  }
+  .offer_button a,
+  .rh_button,
+  .elementor-button {
+    min-height: 44px;
+    padding: 12px 24px;
+  }
+  .wpsm-comptable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* Tablet-spezifische Optimierungen */
-    .elementor-section .elementor-container {
-        padding: 0 20px;
-    }
+  .elementor-section .elementor-container {
+    padding: 0 20px;
+  }
 }
 
-/* ---- Print Styles (fuer Google Lighthouse Score) ---- */
+/* =========================================================
+   WOOCOMMERCE PRODUKT-KARTEN (Homepage-Shortcode)
+   ========================================================= */
+.ke-products-wrap ul.products,
+.woocommerce .ke-products-wrap ul.products {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+.ke-products-wrap ul.products li.product {
+  background: var(--ke-white) !important;
+  border-radius: var(--ke-radius-lg) !important;
+  padding: 24px !important;
+  box-shadow: var(--ke-shadow) !important;
+  border: 1px solid var(--ke-gray-200) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin: 0 !important;
+  float: none !important;
+  width: 100% !important;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition) !important;
+}
+.ke-products-wrap ul.products li.product:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--ke-shadow-lg) !important;
+}
+.ke-products-wrap ul.products li.product img {
+  border-radius: var(--ke-radius) !important;
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+}
+.ke-products-wrap ul.products .woocommerce-loop-product__title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--ke-dark) !important;
+  line-height: 1.35 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.ke-products-wrap .star-rating span::before {
+  color: var(--ke-amber) !important;
+}
+.ke-products-wrap .price,
+.ke-products-wrap .woocommerce-Price-amount {
+  color: var(--ke-gray-500) !important;
+  font-size: 13px !important;
+}
+.ke-products-wrap ul.products li.product .button,
+.ke-products-wrap ul.products li.product a.button {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  background: var(--ke-blue-600) !important;
+  color: var(--ke-white) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 12px 16px !important;
+  border-radius: var(--ke-radius) !important;
+  text-decoration: none !important;
+  border: none !important;
+  margin-top: auto !important;
+  transition: background var(--ke-transition) !important;
+}
+.ke-products-wrap ul.products li.product .button:hover,
+.ke-products-wrap ul.products li.product a.button:hover {
+  background: var(--ke-blue-500) !important;
+}
+
+/* =========================================================
+   WOOCOMMERCE KATEGORIEN (Homepage-Shortcode)
+   ========================================================= */
+.ke-categories-wrap ul.product-categories {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.ke-categories-wrap ul.product-categories li.product-category {
+  background: var(--ke-white) !important;
+  border: 1px solid var(--ke-gray-200) !important;
+  border-radius: var(--ke-radius-lg) !important;
+  padding: 28px 22px !important;
+  box-shadow: var(--ke-shadow-sm) !important;
+  text-align: center !important;
+  margin: 0 !important;
+  float: none !important;
+  width: 100% !important;
+  transition: transform var(--ke-transition), box-shadow var(--ke-transition), border-color var(--ke-transition) !important;
+}
+.ke-categories-wrap ul.product-categories li.product-category:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: var(--ke-shadow) !important;
+  border-color: var(--ke-blue-600) !important;
+}
+.ke-categories-wrap ul.product-categories li.product-category img {
+  border-radius: var(--ke-radius) !important;
+  width: 100% !important;
+  height: 120px !important;
+  object-fit: cover !important;
+  margin-bottom: 14px !important;
+}
+.ke-categories-wrap .woocommerce-loop-category__title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--ke-dark) !important;
+}
+.ke-categories-wrap mark {
+  background: none !important;
+  color: var(--ke-gray-500) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 900px) {
+  .ke-products-wrap ul.products,
+  .ke-categories-wrap ul.product-categories {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 600px) {
+  .ke-products-wrap ul.products,
+  .ke-categories-wrap ul.product-categories {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================================================
+   PRINT & ACCESSIBILITY
+   ========================================================= */
 @media print {
-    .flavor flavor-header-wrap,
-    .flavor flavor-footer-wrap,
-    .elementor-widget-sidebar,
-    .rh-stickysidebar {
-        display: none !important;
-    }
+  #site-header, footer, .elementor-widget-sidebar { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
