@@ -1,0 +1,6 @@
+{
+  "_README": "Lean v2 only uses this file for the bookend public homepage scroll MP4 (slide 1 + final CTA slide background). Body-of-deck product screenshots are NOT pre-captured here — they're declared per scene via `screenshot_action` in the script and captured after the script is written. Add only the homepage URL.",
+  "urls": [
+    {"url": "https://example.com", "slug": "homepage", "label": "Homepage"}
+  ]
+}

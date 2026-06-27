@@ -1,0 +1,50 @@
+{
+  "name": "editorial",
+  "_description": "The lean skill's single default theme. Cream/off-white bg, charcoal text, single warm accent (coral) + secondary mustard, serif headline + sans body. Stripe / Linear / Notion deck aesthetic. Best for SaaS-founder pitch-deck-style reviews.",
+  "background": {
+    "primary": "#faf6ee",
+    "studio": "linear-gradient(180deg, #faf6ee 0%, #f0ead9 100%)",
+    "card_mount": "#ffffff",
+    "slide_bg_alt": "#f4ede0"
+  },
+  "ink": {
+    "primary": "#1a1f2c",
+    "secondary": "#3d4253",
+    "muted": "#8a8e9b",
+    "inverse": "#faf6ee"
+  },
+  "accent": {
+    "primary": "#f25f4c",
+    "secondary": "#e4b257"
+  },
+  "typography": {
+    "display": "'Playfair Display', Georgia, serif",
+    "body": "'Inter', system-ui, sans-serif",
+    "mono": "'JetBrains Mono', monospace",
+    "headline_weight": 600,
+    "body_weight": 400,
+    "tracking_display": "-0.01em"
+  },
+  "motion": {
+    "ken_burns": "subtle",
+    "transition": "fade-300ms",
+    "stat_reveal": "fade-up-260ms"
+  },
+  "ui_screenshot": {
+    "mount_style": "seamless-light-on-light",
+    "shadow": "0 12px 48px rgba(26,31,44,0.10)",
+    "border_radius_px": 12
+  },
+  "captions": {
+    "bg": "rgba(26,31,44,0.86)",
+    "fg": "#faf6ee",
+    "accent": "#f25f4c"
+  },
+  "deck": {
+    "_note": "Deck-specific spacing — generous whitespace, slow pacing, Stripe-like.",
+    "title_max_width_pct": 72,
+    "body_max_width_pct": 60,
+    "scene_min_seconds": 12,
+    "scene_max_seconds": 18
+  }
+}

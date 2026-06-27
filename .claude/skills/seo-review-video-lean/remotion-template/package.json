@@ -1,0 +1,26 @@
+{
+  "name": "video-production",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx remotion studio",
+    "build": "npx remotion render SlideDeck out/video.mp4",
+    "render": "npx remotion render SlideDeck out/video.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "latest",
+    "@remotion/google-fonts": "latest",
+    "@remotion/media": "latest",
+    "@remotion/paths": "latest",
+    "@remotion/transitions": "latest",
+    "react": "^19",
+    "react-dom": "^19",
+    "remotion": "latest",
+    "zod": "^3"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "latest",
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
+}
