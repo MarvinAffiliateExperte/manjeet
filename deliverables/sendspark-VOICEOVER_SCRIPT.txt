@@ -1,0 +1,111 @@
+SENDSPARK REVIEW 2026 — VOICEOVER SCRIPT
+Generated: 2026-07-03
+15 Scenes | ~4 minutes estimated
+
+======================================================
+
+[SCENE 01 — TITLE CARD]
+SENDSPARK REVIEW 2026
+
+What if you could record one sales video and send a personalized version to every prospect on your list — with their name spoken in your voice and their company website as the background? That's Sendspark. In the next few minutes we'll cover what it actually does, whether the AI personalization holds up, what it costs, and where the tool still has rough edges.
+
+------------------------------------------------------
+
+[SCENE 02 — WHAT IS SENDSPARK?]
+WHAT IS SENDSPARK?
+
+Sendspark is an AI-powered personalized video platform built for B2B sales teams. You record one video once, upload your prospect list as a CSV, and Sendspark's AI generates a unique version for every contact — speaking their name in your cloned voice, swapping in their company website as a live background, and embedding the result in a branded landing page. It integrates natively with Salesforce, HubSpot, Outreach, Salesloft, and LinkedIn.
+
+------------------------------------------------------
+
+[SCENE 03 — AI PERSONALIZATION]
+RECORD ONCE. PERSONALIZE THOUSANDS.
+
+The headline feature is scale personalization. You record a single video, Sendspark clones your voice, and at send time the AI speaks each prospect's first name naturally in your voice. A dynamic background pulls their company website in real time and places you in front of it. Every recipient gets a video that looks and sounds like you recorded it just for them — at the cost of recording it once.
+
+------------------------------------------------------
+
+[SCENE 04 — THE FULL TOOLKIT]
+THE FULL TOOLKIT
+
+Beyond AI personalization, the toolkit includes screen and webcam recording, branded landing pages for every video, real-time analytics showing who watched and for how long, a video request feature so prospects can record replies, and CRM syncing that logs views and clicks directly into your pipeline. It is the full outreach video stack in one tool.
+
+------------------------------------------------------
+
+[SCENE 05 — 3X REPLY RATES]
+3X REPLY RATES
+
+The numbers users report are consistent. Brikl saw a sixty-two percent increase in open rates, a forty-six percent jump in demos booked, and more than quadrupled their reply rate within two weeks. One HubSpot rep sent one hundred ninety-seven AI-personalized videos and landed a ninety-three percent click-through rate and a twenty-eight percent response rate. The platform's own data puts average reply rate uplift at three times baseline outreach.
+
+------------------------------------------------------
+
+[SCENE 06 — WHAT USERS SAY]
+WHAT USERS SAY
+
+Here's what real users say. One account executive on G2 wrote: The AI personalization is the killer feature. I record one video, upload my CSV, and Sendspark generates a personalized version for every prospect with their name and their company's website as the background. My reply rate tripled in the first week.
+
+------------------------------------------------------
+
+[SCENE 07 — 62% MORE OPENS, 4X REPLIES]
+62% MORE OPENS, 4X REPLIES
+
+A sales director at Brikl reported: Within two weeks we saw a sixty-two percent increase in open rates, a forty-six percent jump in demos booked, and more than quadrupled our reply rate. Our SDRs also create videos forty percent faster than before.
+
+------------------------------------------------------
+
+[SCENE 08 — PRICING TIERS]
+PRICING TIERS
+
+Pricing starts at forty-nine dollars a month for the Solo plan — one user with core AI personalization. Growth is ninety-nine for three users with advanced analytics. Team is two-ninety-nine for ten users with full CRM integration. Business is six-ninety-nine for unlimited users with priority support. There is no free plan, and the trial requires a credit card — something worth knowing upfront.
+
+------------------------------------------------------
+
+[SCENE 09 — THE HONEST CAVEATS]
+THE HONEST CAVEATS
+
+Here is what to know before you buy. Recording reliability is the most common complaint — some users report failed recordings roughly half the time, requiring retries that eliminate the speed advantage. Editing is limited to trimming the ends of clips — no mid-video cuts or rearranging. And the billing and cancellation process has attracted serious criticism, with users reporting unexpected charges after trials that auto-converted without clear warning.
+
+------------------------------------------------------
+
+[SCENE 10 — RECORDING & BILLING PROBLEMS]
+RECORDING & BILLING PROBLEMS
+
+One user on Trustpilot flagged both issues: Recording fails roughly half the time and you have to retry and retry, which kills the speed advantage. And cancelling is a nightmare. I had to email support with 'Terminate Trial' in the subject line or I'd be charged automatically. Not transparent at all.
+
+------------------------------------------------------
+
+[SCENE 11 — EDITING LIMITATIONS]
+EDITING LIMITATIONS
+
+A marketing manager on Capterra noted: Editing is limited to trimming the ends. There's no way to cut mid-video or rearrange sections. If you stumble twenty seconds in you have to re-record the whole thing. For a video tool in 2026 that's a real gap.
+
+------------------------------------------------------
+
+[SCENE 12 — PROS VS CONS]
+PROS VS CONS
+
+The honest split. On the pro side: AI personalization that genuinely works at scale, native integrations with every major sales CRM, and reply rate improvements that multiple teams have documented independently. On the con side: recording reliability issues that undercut the speed pitch, editing that stops at basic trimming, and a billing setup that has surprised users who thought they'd cancelled.
+
+------------------------------------------------------
+
+[SCENE 13 — THE ALTERNATIVES]
+THE ALTERNATIVES
+
+The main alternatives. Vidyard has a stronger free tier and better editing but lacks Sendspark's voice-cloning personalization. Loom is the best async video tool available but doesn't offer AI scale personalization. BombBomb goes deep on email-native video but has an older interface. HeyGen creates AI avatars but isn't designed around CRM-connected outreach. If scale personalization in a sales workflow is the need, Sendspark has the clearest focus on that specific problem.
+
+------------------------------------------------------
+
+[SCENE 14 — WHO IT'S BUILT FOR]
+WHO IT'S BUILT FOR
+
+Sendspark is built for B2B SDRs, AEs, and sales teams doing high-volume outreach who want the conversion lift of personalized video without the time cost of recording every message individually. If your team is sending more than fifty outreach emails a week and video reply rates would move your pipeline, the AI personalization is the fastest path to that outcome currently available.
+
+------------------------------------------------------
+
+[SCENE 15 — TRY SENDSPARK]
+TRY SENDSPARK
+
+Sendspark is the most complete AI-personalized video tool for B2B sales in 2026. Start with the Solo plan at forty-nine dollars, run your first personalized campaign with a small prospect list, and verify the recording reliability works on your setup before scaling. And read the trial cancellation policy before you put in a credit card. Link in the description.
+
+======================================================
+END OF SCRIPT
