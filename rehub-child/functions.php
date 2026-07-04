@@ -334,14 +334,17 @@ add_action('wp_enqueue_scripts', 'ke_elementor_disable_dialog_on_homepage', 999)
  * Im Backend auf 60 Sekunden limitieren
  */
 function ke_optimize_heartbeat($settings) {
-    if (!is_admin()) {
-        wp_deregister_script('heartbeat');
-    } else {
-        $settings['interval'] = 60;
-    }
+    $settings['interval'] = 60;
     return $settings;
 }
 add_filter('heartbeat_settings', 'ke_optimize_heartbeat');
+
+// Heartbeat im Frontend per init deaktivieren (heartbeat_settings faeuert nur bei AJAX-Requests)
+add_action('init', function() {
+    if (!is_admin()) {
+        wp_deregister_script('heartbeat');
+    }
+});
 
 // =====================================================
 // 8. SECURITY & CLEANUP
