@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920,height=1080">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #0f0f1a;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .card {
+    max-width: 1200px; text-align: center;
+    padding: 80px 60px;
+  }
+  .eyebrow {
+    font-size: 22px; letter-spacing: 4px; text-transform: uppercase;
+    color: #ff6b6b; margin-bottom: 40px; font-weight: 600;
+  }
+  h1 {
+    font-size: 72px; font-weight: 800; line-height: 1.1;
+    margin-bottom: 48px;
+    background: linear-gradient(135deg, #fff 0%, #c0c0e0 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .stats {
+    display: flex; gap: 60px; justify-content: center; margin-top: 40px;
+  }
+  .stat { text-align: center; }
+  .stat-number { font-size: 64px; font-weight: 900; color: #ff6b6b; }
+  .stat-label { font-size: 20px; color: #aaa; margin-top: 8px; }
+  .divider {
+    width: 80px; height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #ff9f43);
+    margin: 40px auto; border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">Das Problem</div>
+    <h1>Online-Kurse kosten<br>bis zu 2.000 €</h1>
+    <div class="divider"></div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">68%</div>
+        <div class="stat-label">bereuen ihren Kauf</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">neue Kurse pro Monat</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">0%</div>
+        <div class="stat-label">unabhängige Infos</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

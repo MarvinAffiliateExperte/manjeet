@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920,height=1080">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1920px; height: 1080px; overflow: hidden;
+    background: #0f0f1a;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #fff;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 60px;
+  }
+  .eyebrow {
+    font-size: 20px; letter-spacing: 4px; text-transform: uppercase;
+    color: #54a0ff; margin-bottom: 20px; font-weight: 600;
+  }
+  h1 { font-size: 52px; font-weight: 800; margin-bottom: 48px; text-align: center; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1700px;
+  }
+  .feature {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 36px 24px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .icon { font-size: 48px; margin-bottom: 20px; }
+  .feature-title { font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #54a0ff; }
+  .feature-desc { font-size: 16px; color: #bbb; line-height: 1.5; }
+  .accent { color: #ff6b6b; }
+</style>
+</head>
+<body>
+  <div class="eyebrow">Was macht kurs-erfahrungen.com besonders?</div>
+  <h1>5 Gründe, warum es funktioniert</h1>
+  <div class="grid">
+    <div class="feature">
+      <div class="icon">✅</div>
+      <div class="feature-title">Ehrliche Bewertungen</div>
+      <div class="feature-desc">Einheitliches Schema — Inhalt, Struktur, Support, Preis-Leistung. Kein Schönreden.</div>
+    </div>
+    <div class="feature">
+      <div class="icon">🔄</div>
+      <div class="feature-title">Aktuell gehalten</div>
+      <div class="feature-desc">Bewertungen werden regelmäßig aktualisiert — immer Stand des aktuellen Monats.</div>
+    </div>
+    <div class="feature">
+      <div class="icon">🎯</div>
+      <div class="feature-title">Smarte Filter</div>
+      <div class="feature-desc">Niveau, Ziel, Preis — nur Kurse, die wirklich zu dir passen.</div>
+    </div>
+    <div class="feature">
+      <div class="icon">💬</div>
+      <div class="feature-title">Community-Feedback</div>
+      <div class="feature-desc">Echte Nutzererfahrungen fließen in die Gesamtbewertung ein.</div>
+    </div>
+    <div class="feature">
+      <div class="icon">🆓</div>
+      <div class="feature-title">Kostenlos &amp; anonym</div>
+      <div class="feature-desc">Kein Account, kein Newsletter-Zwang — einfach lesen und entscheiden.</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "product": "kurs-erfahrungen.com",
+  "url": "https://kurs-erfahrungen.com",
+  "target_duration_seconds": 270,
+  "output_resolution": "1920x1080",
+  "fps": 30,
+  "scenes": [
+    {
+      "id": "homepage_scroll",
+      "type": "scroll_video",
+      "label": "Homepage Scroll (Intro)",
+      "url": "https://kurs-erfahrungen.com",
+      "scroll_duration_s": 8,
+      "viewport": { "width": 1920, "height": 1080 },
+      "wait_for_selector": "body",
+      "output": "assets/homepage_scroll_intro.mp4",
+      "vo_start_s": 0,
+      "vo_end_s": 25
+    },
+    {
+      "id": "problem_slide",
+      "type": "slide",
+      "label": "Problem: Kurs-Kauf-Risiko",
+      "template": "slides/problem.html",
+      "output": "assets/problem_slide.png",
+      "duration_s": 35,
+      "vo_start_s": 25,
+      "vo_end_s": 60
+    },
+    {
+      "id": "solution_intro",
+      "type": "screenshot",
+      "label": "Solution: Portal-Übersicht",
+      "url": "https://kurs-erfahrungen.com",
+      "scroll_to_px": 0,
+      "highlight_selector": null,
+      "output": "assets/solution_intro.png",
+      "duration_s": 30,
+      "vo_start_s": 60,
+      "vo_end_s": 90
+    },
+    {
+      "id": "features_grid",
+      "type": "slide",
+      "label": "5 Features Grid",
+      "template": "slides/features.html",
+      "output": "assets/features_grid.png",
+      "duration_s": 60,
+      "vo_start_s": 90,
+      "vo_end_s": 150
+    },
+    {
+      "id": "reddit_testimonials",
+      "type": "slide",
+      "label": "Reddit Testimonials",
+      "template": "slides/testimonials.html",
+      "reddit_source": "assets/reddit_quotes.json",
+      "output": "assets/reddit_testimonials.png",
+      "duration_s": 50,
+      "vo_start_s": 150,
+      "vo_end_s": 200
+    },
+    {
+      "id": "top_picks",
+      "type": "screenshot",
+      "label": "Top Picks / Category Pages",
+      "url": "https://kurs-erfahrungen.com",
+      "scroll_to_px": 600,
+      "highlight_selector": null,
+      "output": "assets/top_picks.png",
+      "duration_s": 35,
+      "vo_start_s": 200,
+      "vo_end_s": 235
+    },
+    {
+      "id": "cta_slide",
+      "type": "slide",
+      "label": "Call-To-Action",
+      "template": "slides/cta.html",
+      "output": "assets/cta_slide.png",
+      "duration_s": 35,
+      "vo_start_s": 235,
+      "vo_end_s": 270
+    },
+    {
+      "id": "homepage_scroll_outro",
+      "type": "scroll_video",
+      "label": "Homepage Scroll (Outro B-roll)",
+      "url": "https://kurs-erfahrungen.com",
+      "scroll_duration_s": 15,
+      "scroll_direction": "up",
+      "viewport": { "width": 1920, "height": 1080 },
+      "wait_for_selector": "body",
+      "output": "assets/homepage_scroll_outro.mp4",
+      "vo_start_s": 270,
+      "vo_end_s": 285
+    }
+  ]
+}
